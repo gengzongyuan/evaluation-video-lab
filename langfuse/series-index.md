@@ -44,3 +44,5 @@
 | LF-04 | Prompt 管理、版本和 label | 快切 v2 | `lf04-prompt-lesson.md`、`lf04-fact-audit.md` | `videos/LF-04-prompt-management-v2.mp4` | prototype | L1 |
 
 | LF-05 | Dataset 与可重复实验 | 快切 v2 | `lf05-dataset-lesson.md`、`lf05-fact-audit.md` | `videos/LF-05-dataset-v2.mp4` | prototype | L1 |
+
+| LF-06 | Evaluation、Score 与失败样本 | 快切 v2 | `lf06-score-lesson.md`、`lf06-fact-audit.md` | `videos/LF-06-score-v2.mp4` | prototype | L1 |
