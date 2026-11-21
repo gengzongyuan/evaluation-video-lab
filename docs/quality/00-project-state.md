@@ -75,3 +75,9 @@
 - 演示计划：`langfuse/lf03-demo-plan.md`。
 - 视频原型：`langfuse/videos/LF-03-span-generation-prototype.mp4`，ffprobe 验证 180 秒。
 - 当前状态：`prototype / L1`；真实调用树仍等待项目 Key 与 SDK 运行证据。
+
+## Langfuse 系列索引结果
+
+- 课程索引：`langfuse/series-index.md`，LF-01–15。
+- manifest 已登记 15 集；其中 7 集有可播放原型，8 集保持脚本状态。
+- 本轮验证：manifest episode 数量为 15；所有登记视频文件存在且非空。

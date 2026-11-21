@@ -5,93 +5,155 @@
   "episodes": [
     {
       "id": "LF-01",
-      "title": "Langfuse 是什么：给 LLM 应用装一台黑匣子",
+      "title": "Langfuse 是什么",
       "level": "入门",
-      "script": "langfuse/scripts-beginner.md",
-      "status": "scripted",
+      "script": "langfuse/episodes/LF-01-script.md",
+      "video": "langfuse/videos/LF-01-langfuse-overview-prototype.mp4",
+      "status": "prototype",
       "claim_level": "L1",
-      "official_sources": [
-        "https://langfuse.com/docs",
-        "https://langfuse.com/docs/sdk"
-      ],
-      "source_verification": "langfuse/source-verification.md",
-      "recording_checklist": "langfuse/demo-checklist-beginner.md"
+      "evidence_note": "concept/script or prototype; real instance evidence must be re-run before release"
     },
     {
       "id": "LF-02",
-      "title": "Trace 是什么：把一次请求还原成调用树",
+      "title": "Trace 是什么",
       "level": "入门",
       "script": "langfuse/scripts-beginner.md",
+      "video": "langfuse/videos/LF-02-trace-prototype.mp4",
       "status": "prototype",
       "claim_level": "L1",
-      "official_sources": [
-        "https://langfuse.com/docs/observability/overview",
-        "https://langfuse.com/docs/observability/data-model"
-      ],
-      "evidence": "local health endpoint observed 2026-11-21; trace write/UI still pending",
-      "source_verification": "langfuse/source-verification.md",
-      "recording_checklist": "langfuse/demo-checklist-beginner.md",
-      "video": "langfuse/videos/LF-02-trace-prototype.mp4",
-      "evidence_note": "health endpoint current; historical API replay documented; fresh Trace blocked pending project key"
+      "evidence_note": "concept/script or prototype; real instance evidence must be re-run before release"
     },
     {
       "id": "LF-03",
-      "title": "Span 和 Generation 怎么区分",
+      "title": "Span / Generation / Tool / Agent",
       "level": "入门",
-      "script": "langfuse/scripts-beginner.md",
+      "script": "langfuse/lf03-script-revision.md",
+      "video": "langfuse/videos/LF-03-span-generation-prototype.mp4",
       "status": "prototype",
       "claim_level": "L1",
-      "official_sources": [
-        "https://langfuse.com/docs/observability/data-model"
-      ],
-      "evidence": "demo plan prepared; runtime verification pending",
-      "source_verification": "langfuse/source-verification.md",
-      "recording_checklist": "langfuse/demo-checklist-beginner.md",
-      "video": "langfuse/videos/LF-03-span-generation-prototype.mp4",
-      "evidence_note": "type card and demo plan prepared; fresh current-instance call tree blocked pending project key"
+      "evidence_note": "concept/script or prototype; real instance evidence must be re-run before release"
     },
     {
       "id": "LF-04",
-      "title": "Prompt 为什么要集中管理",
+      "title": "Prompt 管理、版本和 label",
       "level": "基础",
-      "script": "langfuse/scripts-evaluation.md",
+      "script": "langfuse/lf04-prompt-lesson.md",
+      "video": "langfuse/videos/LF-04-prompt-management-prototype.mp4",
       "status": "prototype",
       "claim_level": "L1",
-      "official_sources": [
-        "https://langfuse.com/docs/prompt-management"
-      ],
-      "evidence": "demo plan prepared; runtime verification pending",
-      "source_verification": "langfuse/source-verification.md",
-      "video": "langfuse/videos/LF-04-prompt-management-prototype.mp4",
-      "evidence_note": "official concept and demo plan; live write/read blocked pending project key"
+      "evidence_note": "concept/script or prototype; real instance evidence must be re-run before release"
     },
     {
       "id": "LF-05",
       "title": "Dataset 与可重复实验",
       "level": "进阶",
-      "script": "langfuse/scripts-evaluation.md",
+      "script": "langfuse/lf05-dataset-lesson.md",
+      "video": null,
       "status": "scripted",
       "claim_level": "L1",
-      "official_sources": [
-        "https://langfuse.com/docs/datasets",
-        "https://langfuse.com/docs/evaluation/experiments"
-      ],
-      "source_verification": "langfuse/source-verification.md",
-      "evidence_note": "official concept and demo plan; live write/read blocked pending project key"
+      "evidence_note": "concept/script or prototype; real instance evidence must be re-run before release"
     },
     {
       "id": "LF-06",
       "title": "Evaluation、Score 与失败样本",
       "level": "进阶",
-      "script": "langfuse/scripts-evaluation.md",
+      "script": "langfuse/lf06-score-lesson.md",
+      "video": null,
       "status": "scripted",
       "claim_level": "L1",
-      "official_sources": [
-        "https://langfuse.com/docs/evaluation/overview",
-        "https://langfuse.com/docs/observability/features/scores"
-      ],
-      "evidence_note": "official concept and demo plan; live write/read blocked pending project key"
+      "evidence_note": "concept/script or prototype; real instance evidence must be re-run before release"
+    },
+    {
+      "id": "LF-07",
+      "title": "成本、token usage 和延迟",
+      "level": "进阶",
+      "script": "langfuse/lf07-cost-latency-lesson.md",
+      "video": "langfuse/videos/LF-07-cost-latency-prototype.mp4",
+      "status": "prototype",
+      "claim_level": "L1",
+      "evidence_note": "concept/script or prototype; real instance evidence must be re-run before release"
+    },
+    {
+      "id": "LF-08",
+      "title": "用户反馈回流 Score",
+      "level": "进阶",
+      "script": "langfuse/lf08-feedback-lesson.md",
+      "video": null,
+      "status": "scripted",
+      "claim_level": "L1",
+      "evidence_note": "concept/script or prototype; real instance evidence must be re-run before release"
+    },
+    {
+      "id": "LF-09",
+      "title": "Sampling、脱敏、保留和治理",
+      "level": "生产",
+      "script": "langfuse/lf09-production-governance-lesson.md",
+      "video": null,
+      "status": "scripted",
+      "claim_level": "L1",
+      "evidence_note": "concept/script or prototype; real instance evidence must be re-run before release"
+    },
+    {
+      "id": "LF-10",
+      "title": "多步骤 Agent 调用树",
+      "level": "生产",
+      "script": "langfuse/lf10-agent-observability-lesson.md",
+      "video": "langfuse/videos/LF-10-agent-observability-prototype.mp4",
+      "status": "prototype",
+      "claim_level": "L1",
+      "evidence_note": "concept/script or prototype; real instance evidence must be re-run before release"
+    },
+    {
+      "id": "LF-11",
+      "title": "同 Dataset 比较 Prompt / 模型",
+      "level": "进阶",
+      "script": "langfuse/lf11-experiment-compare-lesson.md",
+      "video": null,
+      "status": "scripted",
+      "claim_level": "L1",
+      "evidence_note": "concept/script or prototype; real instance evidence must be re-run before release"
+    },
+    {
+      "id": "LF-12",
+      "title": "异常 Trace 到修复和回归",
+      "level": "生产",
+      "script": "langfuse/lf12-debugging-loop-lesson.md",
+      "video": null,
+      "status": "scripted",
+      "claim_level": "L1",
+      "evidence_note": "concept/script or prototype; real instance evidence must be re-run before release"
+    },
+    {
+      "id": "LF-13",
+      "title": "自托管架构与健康检查",
+      "level": "生产",
+      "script": "langfuse/lf13-self-hosting-lesson.md",
+      "video": "langfuse/videos/LF-13-self-hosting-prototype.mp4",
+      "status": "prototype",
+      "claim_level": "L1",
+      "evidence_note": "concept/script or prototype; real instance evidence must be re-run before release"
+    },
+    {
+      "id": "LF-14",
+      "title": "SDK 与服务端版本锁定",
+      "level": "生产",
+      "script": "langfuse/lf14-sdk-version-lesson.md",
+      "video": null,
+      "status": "scripted",
+      "claim_level": "L1",
+      "evidence_note": "concept/script or prototype; real instance evidence must be re-run before release"
+    },
+    {
+      "id": "LF-15",
+      "title": "视频与实验发布门禁",
+      "level": "生产",
+      "script": "langfuse/lf15-release-gate-lesson.md",
+      "video": null,
+      "status": "scripted",
+      "claim_level": "L1",
+      "evidence_note": "concept/script or prototype; real instance evidence must be re-run before release"
     }
   ],
-  "next_depth_question": "Trace、Span、Generation 的最小可运行示例，如何在视频中同时展示代码、UI 和一条真实 trace？"
+  "next_depth_question": "Trace、Span、Generation 的最小可运行示例，如何在视频中同时展示代码、UI 和一条真实 trace？",
+  "updated_at": "2026-11-22"
 }
