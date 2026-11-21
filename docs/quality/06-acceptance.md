@@ -150,3 +150,9 @@
 
 - [x] 新增 `langfuse/scripts/check-runtime.sh`，只检查变量存在、health 和版本，不打印 Secret。
 - [x] 无凭据负向测试返回退出码 2，未泄露任何值。
+
+## Langfuse LF-16 v4 迁移
+
+- [x] v4 events_only、旧 API 404 和 OTEL 迁移方向已形成脚本与视频原型。
+- [x] LF-16 视频通过 180 秒音视频流 QA。
+- [ ] OTEL 新 Trace 写入仍待受保护项目 Key 和当前 SDK 实跑。

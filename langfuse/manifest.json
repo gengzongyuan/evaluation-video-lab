@@ -152,6 +152,16 @@
       "status": "prototype",
       "claim_level": "L1",
       "evidence_note": "voiceover prototype; real UI/SDK/Dataset/Score evidence pending"
+    },
+    {
+      "id": "LF-16",
+      "title": "Langfuse v4：旧 API 为什么失效？",
+      "level": "迁移",
+      "script": "langfuse/lf16-v4-otel-migration-lesson.md",
+      "video": "langfuse/videos/LF-16-v4-otel-migration-prototype.mp4",
+      "status": "prototype",
+      "claim_level": "L1",
+      "evidence_note": "current probe and archived official docs; new OTEL write still pending protected key"
     }
   ],
   "next_depth_question": "Trace、Span、Generation 的最小可运行示例，如何在视频中同时展示代码、UI 和一条真实 trace？",
