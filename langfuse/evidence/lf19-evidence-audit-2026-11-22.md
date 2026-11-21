@@ -13,7 +13,7 @@
 | Gateway readiness | BLOCKED/未配置 | raw 响应正文为 `status=unconfigured`；桥接记录注明实际 HTTP 503 |
 | OTEL 入口存在 | verified | `lf16-otel-endpoint-probe-2026-11-22.md` 记录入口响应 405/204/401 |
 | OTEL 认证成功 | BLOCKED | 当前环境没有项目 key/secret，401 只能证明认证门生效 |
-| 新 Trace 写入 | BLOCKED | 没��受保护凭据、脱敏 payload、Trace ID 和回读响应 |
+| 新 Trace 写入 | BLOCKED | 没有受保护凭据、脱敏 payload、Trace ID 和回读响应 |
 | UI/API 回读 | BLOCKED | 旧 API 路径返回 v4 `events_only` 迁移提示，未取得新 Trace |
 
 ## LF-19 可安全讲述的范围

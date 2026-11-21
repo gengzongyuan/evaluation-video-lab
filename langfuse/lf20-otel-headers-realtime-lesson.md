@@ -82,7 +82,7 @@
 - `langfuse/source-link-audit-2026-11-22.md`
 - 具体 headers、属性名和 exporter 行为必须在录制当天重新核对 Langfuse 官方当前文档；本文件不把示意字段当成已运行事实。
 
-## 发布���检查
+## 发布前检查
 
 - [ ] 约 180 秒，音频和视频流均存在。
 - [ ] 字幕逐字复核 `headers`、`flush`、`retry`、`readback` 和 `BLOCKED`。

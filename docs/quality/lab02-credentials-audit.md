@@ -16,7 +16,7 @@
 
 ## 需要限制传播的信息
 
-1. `lab02-langfuse.png` 与 `lab02-langfuse-fixed.png` 显示自托管项目名 `tree_eval`/`local_agent`、真实 Trace ID、Observation 树、调用时间、模型/Token/延迟摘要，以及完整的 Codex 输入输出片段；其中��见本机工作区路径和部分内部上下文。这些不是凭据，但属于业务和环境信息。
+1. `lab02-langfuse.png` 与 `lab02-langfuse-fixed.png` 显示自托管项目名 `tree_eval`/`local_agent`、真实 Trace ID、Observation 树、调用时间、模型/Token/延迟摘要，以及完整的 Codex 输入输出片段；其中可见本机工作区路径和部分内部上下文。这些不是凭据，但属于业务和环境信息。
 2. `LANGFUSE_DEPLOYED_INSTANCE_172.16.33.136.md` 暴露内网 IP、SSH 用户名、端口、服务拓扑、容器名、卷路径和健康端点。该文档适合私有运维交接，不适合公开仓库或公开文章。
 3. 部署文档中的 `mysecret`、`postgres` 等只出现在“不要沿用默认值”的说明或占位模板中，不能当成泄露凭据；发布前仍应确认没有把模板误当实际配置。
 

@@ -13,7 +13,7 @@
 
 1. 安装官方 Python 或 JS/TS SDK，记录精确版本。
 2. 设置 `LANGFUSE_PUBLIC_KEY`、`LANGFUSE_SECRET_KEY`、`LANGFUSE_BASE_URL`。
-3. 按当前官方 SDK quickstart 创建���次 Trace 和一个模型调用 Observation。
+3. 按当前官方 SDK quickstart 创建一次 Trace 和一个模型调用 Observation。
 4. 等待 SDK flush/shutdown；保存终端日志和运行时间。
 5. 在 Web UI 按时间或 Trace 名称搜索，打开详情页。
 6. 截取输入、输出、时间、Observation 类型和元数据字段；对 key、URL、业务文本做脱敏。

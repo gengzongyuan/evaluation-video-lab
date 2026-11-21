@@ -17,7 +17,7 @@
 | LF-11 | 同 Dataset 比较 Prompt / 模型 | 进阶 | `lf11-experiment-compare-lesson.md` | — | scripted | L1 |
 | LF-12 | 异常 Trace 到修复和回归 | 生产 | `lf12-debugging-loop-lesson.md` | — | scripted | L1 |
 | LF-13 | 自托管架构与健康检查 | 生产 | `lf13-self-hosting-lesson.md` | `videos/LF-13-self-hosting-prototype.mp4` | prototype | L1 |
-| LF-14 | SDK 与服务端版本��定 | 生产 | `lf14-sdk-version-lesson.md` | — | scripted | L1 |
+| LF-14 | SDK 与服务端版本锁定 | 生产 | `lf14-sdk-version-lesson.md` | — | scripted | L1 |
 | LF-15 | 视频与实验发布门禁 | 生产 | `lf15-release-gate-lesson.md` | — | scripted | L1 |
 
 ## 发布顺序

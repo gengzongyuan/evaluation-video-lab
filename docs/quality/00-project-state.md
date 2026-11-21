@@ -25,7 +25,7 @@
 ## 本轮验收门
 
 - [x] 两条视频脚本存在，时长约 3 分钟
-- [x] 每条有一句话结果、���小实验、画面、CTA、证据边界
+- [x] 每条有一句话结果、最小实验、画面、CTA、证据边界
 - [x] 明确示意数据不能冒充实测结论
 - [ ] 事实核验单与生产看板完成汇合
 - [ ] Git 仓库初始化、提交并推送到 GitHub
@@ -77,7 +77,7 @@
 - 来源审计：`langfuse/source-audit.md`。
 - LF-02 录制清单：`langfuse/recording-checklist-trace.md`。
 - LF-03/LF-04 演示实验：`langfuse/demo-experiments.md`。
-- 2026-11-21 已请求本地实例 `/api/public/health?failIfDatabaseUnavailable=true`，返回 JSON 且实例记录为 4.79.0；Trace 写入与 UI 查���仍待真实 SDK 运行验证。
+- 2026-11-21 已请求本地实例 `/api/public/health?failIfDatabaseUnavailable=true`，返回 JSON 且实例记录为 4.79.0；Trace 写入与 UI 查询仍待真实 SDK 运行验证。
 
 ## Langfuse LF-03 结果
 
