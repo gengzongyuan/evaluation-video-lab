@@ -40,3 +40,5 @@
 | LF-03 | 待生成 | 待生成 | scripted | 按 v2 门禁验收 |
 
 | LF-03 | Span / Generation / Tool / Agent | 快切 v2 | `lf03-type-card.md`、`lf03-script-revision.md` | `videos/LF-03-span-generation-v2.mp4` | prototype | L1 |
+
+| LF-04 | Prompt 管理、版本和 label | 快切 v2 | `lf04-prompt-lesson.md`、`lf04-fact-audit.md` | `videos/LF-04-prompt-management-v2.mp4` | prototype | L1 |
