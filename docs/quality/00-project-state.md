@@ -10,9 +10,10 @@
 
 ## 持续 Goal 当前轮（2026-11-22）
 
-- LF-19、LF-20 已完成课程设计稿，仍待视频、字幕和真实 OTEL 运行证据后才能登记为可播放集数。
+- LF-19、LF-20 已完成课程设计、180 秒 MP4 原型和 SRT/VTT 字幕，已登记为 `prototype / L1`；真实 OTEL 运行证据仍待补齐。
+- LF-21 已完成 Dataset run、Score 写入和实验回读课程脚本，登记为 `scripted / L1`，尚未生成视频。
 - LAB-02 证据审计已完成：raw 文件 JSON 解析和 SHA-256 校验通过；health/readiness 为时间点采样，OTEL 入口存在已验证，认证成功、Trace 写入、回读和实时延迟均为 `BLOCKED`。
-- LF-01–LF-18 资产审计通过：18/18 有脚本、MP4、SRT 和 VTT，全部保持 `prototype / L1`。
+- LF-01–LF-20 资产审计通过：20/20 有脚本、MP4、SRT 和 VTT，全部保持 `prototype / L1`；LF-21 有脚本，保持 `scripted / L1`。
 - 本轮验证命令：`python3 langfuse/validate_manifest.py` 通过；在 `langfuse/evidence/raw/` 执行 `shasum -a 256 -c SHA256SUMS-2026-11-22.txt` 全部通过。
 
 ## 已完成证据

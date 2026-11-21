@@ -182,6 +182,35 @@
       "status": "prototype",
       "claim_level": "L1",
       "evidence_note": "read-only gateway probe; no model request or Trace write proof"
+    },
+    {
+      "id": "LF-19",
+      "title": "OTEL 认证门与 Trace ID 回读",
+      "level": "迁移",
+      "script": "langfuse/lf19-otel-auth-readback-lesson.md",
+      "video": "langfuse/videos/LF-19-otel-auth-readback-prototype.mp4",
+      "status": "prototype",
+      "claim_level": "L1",
+      "evidence_note": "OTEL route/auth probe only; protected write and Trace readback remain blocked"
+    },
+    {
+      "id": "LF-20",
+      "title": "OTEL headers、flush 与实时性",
+      "level": "迁移",
+      "script": "langfuse/lf20-otel-headers-realtime-lesson.md",
+      "video": "langfuse/videos/LF-20-otel-headers-realtime-prototype.mp4",
+      "status": "prototype",
+      "claim_level": "L1",
+      "evidence_note": "method prototype; headers, flush, timing and readback require protected run"
+    },
+    {
+      "id": "LF-21",
+      "title": "Dataset run、Score 写入与实验回读",
+      "level": "进阶",
+      "script": "langfuse/lf21-dataset-score-readback-lesson.md",
+      "status": "scripted",
+      "claim_level": "L1",
+      "evidence_note": "scripted lesson; Dataset run, Score write and experiment readback remain blocked"
     }
   ],
   "next_depth_question": "Trace、Span、Generation 的最小可运行示例，如何在视频中同时展示代码、UI 和一条真实 trace？",

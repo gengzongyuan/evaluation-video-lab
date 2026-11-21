@@ -26,3 +26,6 @@
 | LF-16 | Langfuse v4：旧 API 为什么失效？ | 迁移 | `lf16-v4-otel-migration-lesson.md` | `videos/LF-16-v4-otel-migration-prototype.mp4` | prototype | L1 |
 | LF-17 | Health 通过，为什么链路还不能用？ | 生产 | `lf17-health-readiness-lesson.md` | `videos/LF-17-health-readiness-prototype.mp4` | prototype | L1 |
 | LF-18 | Gateway health 正常，为什么 readiness 还是 unconfigured？ | 生产 | `lf18-gateway-readiness-lesson.md` | `videos/LF-18-gateway-readiness-prototype.mp4` | prototype | L1 |
+| LF-19 | OTEL 认证门与 Trace ID 回读 | 迁移 | `lf19-otel-auth-readback-lesson.md` | `videos/LF-19-otel-auth-readback-prototype.mp4` | prototype | L1 |
+| LF-20 | OTEL headers、flush 与实时性 | 迁移 | `lf20-otel-headers-realtime-lesson.md` | `videos/LF-20-otel-headers-realtime-prototype.mp4` | prototype | L1 |
+| LF-21 | Dataset run、Score 写入与实验回读 | 进阶 | `lf21-dataset-score-readback-lesson.md` | — | scripted | L1 |
