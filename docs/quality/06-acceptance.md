@@ -107,3 +107,9 @@
 - [x] LF-04–08、LF-09–12、LF-13–15 录制表已建立。
 - [x] `python3 langfuse/validate_manifest.py` 通过：`episodes=15`、路径和证据字段完整。
 - [ ] 真实运行记录仍未填入；视频保持 `prototype / L1`。
+
+## 视频原型 QA
+
+- [x] 15/15 视频通过音视频流、180 秒时长和 manifest 路径检查。
+- [x] QA 报告已列出画面、字幕、陌生观众复述和实例证据缺口。
+- [x] prototype→verified 审阅表已建立；当前无集数满足完整升级条件。
