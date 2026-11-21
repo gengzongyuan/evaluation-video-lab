@@ -29,3 +29,10 @@
 - [x] LF-01 至 LF-06 已有约 3 分钟脚本、演示步骤和事实边界。
 - [x] LF-01 已生成 180 秒可播放中文旁白原型，状态 `prototype` / `L1`。
 - [ ] LF-01 的真实 SDK、UI 截图和 Trace 运行日志尚未补齐。
+
+## Langfuse LF-02 Trace
+
+- [x] 当前实例 health endpoint 返回 `OK / 4.79.0`。
+- [x] LF-02 证据记录区分官方概念、历史 API 回读和当前实例未重跑状态。
+- [x] LF-02 180 秒旁白视频原型已生成，标记 `prototype / L1`。
+- [ ] 当前项目 Secret、SDK 写入、UI 回读和新 Trace ID 尚未完成；正式产品演示保持 `BLOCKED`。

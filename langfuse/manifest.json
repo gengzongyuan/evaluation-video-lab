@@ -22,7 +22,7 @@
       "title": "Trace 是什么：把一次请求还原成调用树",
       "level": "入门",
       "script": "langfuse/scripts-beginner.md",
-      "status": "scripted",
+      "status": "prototype",
       "claim_level": "L1",
       "official_sources": [
         "https://langfuse.com/docs/observability/overview",
@@ -30,7 +30,9 @@
       ],
       "evidence": "local health endpoint observed 2026-11-21; trace write/UI still pending",
       "source_verification": "langfuse/source-verification.md",
-      "recording_checklist": "langfuse/demo-checklist-beginner.md"
+      "recording_checklist": "langfuse/demo-checklist-beginner.md",
+      "video": "langfuse/videos/LF-02-trace-prototype.mp4",
+      "evidence_note": "health endpoint current; historical API replay documented; fresh Trace blocked pending project key"
     },
     {
       "id": "LF-03",
