@@ -162,3 +162,8 @@
 - [x] OTEL 入口只读/空请求探针已完成：OPTIONS 204、空 POST 401、未发送业务数据。
 - [x] 迁移课已明确入口可达不等于 Trace 写入成功。
 - [ ] 受保护 Key 下的 OTLP payload、Trace ID 和回读仍待执行。
+
+## LF-16 迁移参考代码
+
+- [x] 新增无凭据 Python SDK v5/OTEL 参考代码，并通过 `py_compile`。
+- [ ] 参考代码未在当前环境运行；当前 Trace 写入仍为 BLOCKED。

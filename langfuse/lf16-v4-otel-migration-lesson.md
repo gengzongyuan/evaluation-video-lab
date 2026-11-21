@@ -20,3 +20,7 @@
 ## 现场探针补充
 
 当前实例的 OTEL 路径对 OPTIONS 返回 204，对空 JSON POST 返回 401；这只证明入口和认证门存在，不证明 Trace 已写入。真实演示必须用受保护项目 Key 和当前 SDK/OTEL exporter 发送脱敏 payload。
+
+## 无凭据参考代码
+
+`migration/python_v5_trace.py` 是从本地保存的官方 Python SDK v5 文档抽出的参考形状，已通过 Python 语法检查，但没有在当前环境运行；只有受保护凭据、锁定版本和新 Trace 回读齐全后才可升级证据等级。
