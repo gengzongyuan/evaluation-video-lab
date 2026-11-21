@@ -55,13 +55,15 @@
       "title": "Prompt 为什么要集中管理",
       "level": "基础",
       "script": "langfuse/scripts-evaluation.md",
-      "status": "scripted",
+      "status": "prototype",
       "claim_level": "L1",
       "official_sources": [
         "https://langfuse.com/docs/prompt-management"
       ],
       "evidence": "demo plan prepared; runtime verification pending",
-      "source_verification": "langfuse/source-verification.md"
+      "source_verification": "langfuse/source-verification.md",
+      "video": "langfuse/videos/LF-04-prompt-management-prototype.mp4",
+      "evidence_note": "official concept and demo plan; live write/read blocked pending project key"
     },
     {
       "id": "LF-05",
@@ -74,7 +76,8 @@
         "https://langfuse.com/docs/datasets",
         "https://langfuse.com/docs/evaluation/experiments"
       ],
-      "source_verification": "langfuse/source-verification.md"
+      "source_verification": "langfuse/source-verification.md",
+      "evidence_note": "official concept and demo plan; live write/read blocked pending project key"
     },
     {
       "id": "LF-06",
@@ -86,7 +89,8 @@
       "official_sources": [
         "https://langfuse.com/docs/evaluation/overview",
         "https://langfuse.com/docs/observability/features/scores"
-      ]
+      ],
+      "evidence_note": "official concept and demo plan; live write/read blocked pending project key"
     }
   ],
   "next_depth_question": "Trace、Span、Generation 的最小可运行示例，如何在视频中同时展示代码、UI 和一条真实 trace？"

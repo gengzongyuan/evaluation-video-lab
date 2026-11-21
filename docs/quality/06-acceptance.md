@@ -42,3 +42,9 @@
 - [x] 类型卡、脚本修订版和可执行演示计划已落库。
 - [x] LF-03 180 秒旁白视频原型已生成，状态 `prototype / L1`。
 - [ ] 当前实例 Span/Generation/Tool 调用树尚未用新 Trace ID 回读；正式演示保持 `BLOCKED`。
+
+## Langfuse LF-04–06
+
+- [x] LF-04 Prompt 管理、LF-05 Dataset、LF-06 Evaluation/Score 知识卡已写入。
+- [x] LF-04 已生成 180 秒视频原型，状态 `prototype / L1`。
+- [ ] LF-05 Dataset run 与 LF-06 Score 写入/回读仍待真实项目 Key 和 SDK/API 运行。
