@@ -72,3 +72,9 @@
 - [x] LF-01–15 已汇总到 `langfuse/series-index.md`。
 - [x] `manifest.json` 已从 6 集扩展为 15 集，并核对每个视频路径。
 - [x] 脚本、知识卡和视频原型状态分离；未生成视频的集数保持 `scripted`。
+
+## Langfuse LF-01–15 视频原型覆盖
+
+- [x] 15/15 集 manifest 均有视频路径。
+- [x] 15/15 集视频文件非空，`ffprobe` 验证每条 `duration=180.000000`。
+- [ ] 所有原型仍需替换真实 UI/录屏、SDK/API 回读和脱敏证据，当前只能作为 `prototype / L1`。

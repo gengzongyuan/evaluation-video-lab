@@ -48,20 +48,20 @@
       "title": "Dataset 与可重复实验",
       "level": "进阶",
       "script": "langfuse/lf05-dataset-lesson.md",
-      "video": null,
-      "status": "scripted",
+      "video": "langfuse/videos/LF-05-lesson-prototype.mp4",
+      "status": "prototype",
       "claim_level": "L1",
-      "evidence_note": "concept/script or prototype; real instance evidence must be re-run before release"
+      "evidence_note": "voiceover prototype; real UI/SDK/Dataset/Score evidence pending"
     },
     {
       "id": "LF-06",
       "title": "Evaluation、Score 与失败样本",
       "level": "进阶",
       "script": "langfuse/lf06-score-lesson.md",
-      "video": null,
-      "status": "scripted",
+      "video": "langfuse/videos/LF-06-lesson-prototype.mp4",
+      "status": "prototype",
       "claim_level": "L1",
-      "evidence_note": "concept/script or prototype; real instance evidence must be re-run before release"
+      "evidence_note": "voiceover prototype; real UI/SDK/Dataset/Score evidence pending"
     },
     {
       "id": "LF-07",
@@ -78,20 +78,20 @@
       "title": "用户反馈回流 Score",
       "level": "进阶",
       "script": "langfuse/lf08-feedback-lesson.md",
-      "video": null,
-      "status": "scripted",
+      "video": "langfuse/videos/LF-08-lesson-prototype.mp4",
+      "status": "prototype",
       "claim_level": "L1",
-      "evidence_note": "concept/script or prototype; real instance evidence must be re-run before release"
+      "evidence_note": "voiceover prototype; real UI/SDK/Dataset/Score evidence pending"
     },
     {
       "id": "LF-09",
       "title": "Sampling、脱敏、保留和治理",
       "level": "生产",
       "script": "langfuse/lf09-production-governance-lesson.md",
-      "video": null,
-      "status": "scripted",
+      "video": "langfuse/videos/LF-09-lesson-prototype.mp4",
+      "status": "prototype",
       "claim_level": "L1",
-      "evidence_note": "concept/script or prototype; real instance evidence must be re-run before release"
+      "evidence_note": "voiceover prototype; real UI/SDK/Dataset/Score evidence pending"
     },
     {
       "id": "LF-10",
@@ -108,20 +108,20 @@
       "title": "同 Dataset 比较 Prompt / 模型",
       "level": "进阶",
       "script": "langfuse/lf11-experiment-compare-lesson.md",
-      "video": null,
-      "status": "scripted",
+      "video": "langfuse/videos/LF-11-lesson-prototype.mp4",
+      "status": "prototype",
       "claim_level": "L1",
-      "evidence_note": "concept/script or prototype; real instance evidence must be re-run before release"
+      "evidence_note": "voiceover prototype; real UI/SDK/Dataset/Score evidence pending"
     },
     {
       "id": "LF-12",
       "title": "异常 Trace 到修复和回归",
       "level": "生产",
       "script": "langfuse/lf12-debugging-loop-lesson.md",
-      "video": null,
-      "status": "scripted",
+      "video": "langfuse/videos/LF-12-lesson-prototype.mp4",
+      "status": "prototype",
       "claim_level": "L1",
-      "evidence_note": "concept/script or prototype; real instance evidence must be re-run before release"
+      "evidence_note": "voiceover prototype; real UI/SDK/Dataset/Score evidence pending"
     },
     {
       "id": "LF-13",
@@ -138,20 +138,20 @@
       "title": "SDK 与服务端版本锁定",
       "level": "生产",
       "script": "langfuse/lf14-sdk-version-lesson.md",
-      "video": null,
-      "status": "scripted",
+      "video": "langfuse/videos/LF-14-lesson-prototype.mp4",
+      "status": "prototype",
       "claim_level": "L1",
-      "evidence_note": "concept/script or prototype; real instance evidence must be re-run before release"
+      "evidence_note": "voiceover prototype; real UI/SDK/Dataset/Score evidence pending"
     },
     {
       "id": "LF-15",
       "title": "视频与实验发布门禁",
       "level": "生产",
       "script": "langfuse/lf15-release-gate-lesson.md",
-      "video": null,
-      "status": "scripted",
+      "video": "langfuse/videos/LF-15-lesson-prototype.mp4",
+      "status": "prototype",
       "claim_level": "L1",
-      "evidence_note": "concept/script or prototype; real instance evidence must be re-run before release"
+      "evidence_note": "voiceover prototype; real UI/SDK/Dataset/Score evidence pending"
     }
   ],
   "next_depth_question": "Trace、Span、Generation 的最小可运行示例，如何在视频中同时展示代码、UI 和一条真实 trace？",

@@ -9,3 +9,4 @@
 - `LF-07-cost-latency-prototype.mp4`：180 秒、9:16、中文旁白；主题是 Generation 的 model、usage、latency 和 cost 字段，当前为方法原型。
 - `LF-10-agent-observability-prototype.mp4`：180 秒、9:16、中文旁白；主题是多步骤 Agent 的调用树与 API 回读，当前为方法原型。
 - `LF-13-self-hosting-prototype.mp4`：180 秒、9:16、中文旁白；主题是自托管组件和健康检查，当前为方法原型。
+- `LF-05-lesson-prototype.mp4`, `LF-06-lesson-prototype.mp4`, `LF-08-lesson-prototype.mp4`, `LF-09-lesson-prototype.mp4`, `LF-11-lesson-prototype.mp4`, `LF-12-lesson-prototype.mp4`, `LF-14-lesson-prototype.mp4`, `LF-15-lesson-prototype.mp4`：各 180 秒中文旁白原型；用于验证时长和连续课程节奏，仍需替换真实 UI/录屏与实例证据。
