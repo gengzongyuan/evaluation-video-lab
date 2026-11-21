@@ -1,0 +1,63 @@
+WEBVTT
+
+1
+00:00:00 .000 --> 00:00:15 .000
+不是模型，也不是排行榜。
+prototype / L1；画面为课程示意，真实运行证据仍待复核。
+
+2
+00:00:15 .000 --> 00:00:30 .000
+用户问题 → 检索 → 工具 → 模型 → 答案
+prototype / L1；画面为课程示意，真实运行证据仍待复核。
+
+3
+00:00:30 .000 --> 00:00:45 .000
+Trace = request start → request end
+prototype / L1；画面为课程示意，真实运行证据仍待复核。
+
+4
+00:00:45 .000 --> 00:01:00 .000
+Span = retrieve / parse / tool
+prototype / L1；画面为课程示意，真实运行证据仍待复核。
+
+5
+00:01:00 .000 --> 00:01:15 .000
+prompt → model → output
+prototype / L1；画面为课程示意，真实运行证据仍待复核。
+
+6
+00:01:15 .000 --> 00:01:30 .000
+Trace
+  ├─ Span: retrieve
+  └─ Generation: model
+prototype / L1；画面为课程示意，真实运行证据仍待复核。
+
+7
+00:01:30 .000 --> 00:01:45 .000
+record → inspect → score
+prototype / L1；画面为课程示意，真实运行证据仍待复核。
+
+8
+00:01:45 .000 --> 00:02:00 .000
+correctness / format / feedback
+prototype / L1；画面为课程示意，真实运行证据仍待复核。
+
+9
+00:02:00 .000 --> 00:02:15 .000
+health 200 ≠ new Trace
+prototype / L1；画面为课程示意，真实运行证据仍待复核。
+
+10
+00:02:15 .000 --> 00:02:30 .000
+payload → Trace ID → readback
+prototype / L1；画面为课程示意，真实运行证据仍待复核。
+
+11
+00:02:30 .000 --> 00:02:45 .000
+Langfuse = observe first
+prototype / L1；画面为课程示意，真实运行证据仍待复核。
+
+12
+00:02:45 .000 --> 00:03:00 .000
+Trace / Span / Generation
+prototype / L1；画面为课程示意，真实运行证据仍待复核。
