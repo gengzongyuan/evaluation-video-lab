@@ -96,3 +96,8 @@
 - [x] 历史 LAB-02 Observation 树已整理为脱敏摘要，仅用于概念教学。
 - [x] 系列验证报告已写明已证明与未证明范围。
 - [ ] 当前项目新 Trace/Dataset/Score 仍未取得完整证据包；所有集数保持 `prototype / L1`。
+
+## LF-01–03 真实录制表
+
+- [x] 已建立可直接填写的真实录制表，涵盖版本、命令、Trace/Observation ID、UI/API、脱敏和结论。
+- [ ] 当前仍缺安全项目 Key 和新运行 ID，表单尚未形成 PASS 记录。
