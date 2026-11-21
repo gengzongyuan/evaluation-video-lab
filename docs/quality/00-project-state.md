@@ -8,6 +8,13 @@
 - 项目 A：用户；Codex 承担 PM/TL/QA/执行
 - 本轮目标：在 1.5 小时内交付至少两条可直接拍摄或剪辑的视频包，并建立可持续生产方法。
 
+## 持续 Goal 当前轮（2026-11-22）
+
+- LF-19、LF-20 已完成课程设计稿，仍待视频、字幕和真实 OTEL 运行证据后才能登记为可播放集数。
+- LAB-02 证据审计已完成：raw 文件 JSON 解析和 SHA-256 校验通过；health/readiness 为时间点采样，OTEL 入口存在已验证，认证成功、Trace 写入、回读和实时延迟均为 `BLOCKED`。
+- LF-01–LF-18 资产审计通过：18/18 有脚本、MP4、SRT 和 VTT，全部保持 `prototype / L1`。
+- 本轮验证命令：`python3 langfuse/validate_manifest.py` 通过；在 `langfuse/evidence/raw/` 执行 `shasum -a 256 -c SHA256SUMS-2026-11-22.txt` 全部通过。
+
 ## 已完成证据
 
 - 系列定位、受众、选题准入和两条选题：`content/agent-v01-topic.md`
@@ -33,6 +40,10 @@
 ## 下一层问题
 
 哪类真实评测证据最能提升完播、收藏和评论后的复现实验率？下一轮用真实样本、30秒复述测试和发布数据验证。
+
+## Langfuse 下一层问题
+
+在不暴露项目凭据的前提下，如何为 LF-19/LF-20 补齐脱敏 OTLP payload、Trace ID 回读和实时性证据，使课程从 `prototype / L1` 进入可复核的 `verified` 层？
 
 ## 验证更新
 
