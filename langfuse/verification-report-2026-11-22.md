@@ -10,6 +10,11 @@
 - 官方来源链接已做一次审计；失效深链接已降级到官方父页或当前指南入口。
 - 历史 LAB-02 有脱敏的 Observation 树回读摘要，可用于概念教学。
 
+## LAB-02 证据桥接
+
+- 当前探针、分层 readiness 采样、v4 OTEL 入口探针和历史调用树的对应关系见 `evidence/lab02-document-bridge-2026-11-22.md`。
+- 该桥接记录只索引证据，不把采样端点或认证门升级为 Trace 写入成功。
+
 ## 尚未证明
 
 - 当前微课项目用新项目 Key 写入的新 Trace、Dataset run 或 Score。

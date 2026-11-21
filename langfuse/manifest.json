@@ -172,6 +172,16 @@
       "status": "prototype",
       "claim_level": "L1",
       "evidence_note": "read-only runtime probe; no Trace write proof"
+    },
+    {
+      "id": "LF-18",
+      "title": "Gateway health 正常，为什么 readiness 还是 unconfigured？",
+      "level": "生产",
+      "script": "langfuse/lf18-gateway-readiness-lesson.md",
+      "video": "langfuse/videos/LF-18-gateway-readiness-prototype.mp4",
+      "status": "prototype",
+      "claim_level": "L1",
+      "evidence_note": "read-only gateway probe; no model request or Trace write proof"
     }
   ],
   "next_depth_question": "Trace、Span、Generation 的最小可运行示例，如何在视频中同时展示代码、UI 和一条真实 trace？",

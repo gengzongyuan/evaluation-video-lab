@@ -172,3 +172,8 @@
 
 - [x] health/readiness 差异已形成脚本、证据摘要和 180 秒视频原型。
 - [ ] 运行时探针不替代 OTEL Trace 写入或 Worker/UI/API 端到端验证。
+
+## Langfuse LF-18 Gateway readiness
+
+- [x] Gateway health/readiness 三层判断已形成脚本、证据摘要和 180 秒视频原型。
+- [ ] 未修改 Gateway 配置，未发送模型请求，相关生产链路保持 blocked/risk。
