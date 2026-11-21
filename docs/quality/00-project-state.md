@@ -39,3 +39,9 @@
 - 静态验收已通过。
 - GitHub 仓库已创建并推送，commit `48e1c47`。
 - 首轮阶段仍保持 `in_progress`：真实拍摄与事实核验尚未完成。
+
+## 当前新增证据
+
+- 两条 180 秒可播放竖屏视频原型已生成：`videos/`。
+- `ffprobe` 验证两条视频均为 `duration=180.000000`；视频清单记录状态为 `prototype`、证据等级 `L1`。
+- 事实核验包已由子任务提交：`a97b8ed`，位置为 `docs/fact-check/video-fact-check.md`。

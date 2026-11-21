@@ -14,3 +14,11 @@
 - 内容关键词检查：通过；扫描到 43 条关键内容证据（结果、证据、CTA、时间轴、示意与证据等级）。
 - Git 版本控制：通过；commit `48e1c47` 已推送 `origin/main`。
 - GitHub 远端：通过；仓库为 https://github.com/gengzongyuan/evaluation-video-lab
+
+## 可播放视频原型验收
+
+- [x] `videos/video-01-model-rankings-prototype.mp4` 存在，180 秒，9:16
+- [x] `videos/video-02-minimal-eval-prototype.mp4` 存在，180 秒，9:16
+- [x] 两条视频均含中文旁白音轨
+- [x] 两条视频均标记为 prototype / L1，未冒充最终发布成片
+- [ ] 真实录屏、证据卡、字幕和失败样本仍待下一轮制作

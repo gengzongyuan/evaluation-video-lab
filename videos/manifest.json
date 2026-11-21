@@ -1,0 +1,22 @@
+[
+  {
+    "id": "video-01",
+    "title": "为什么模型排行榜会骗人？",
+    "file": "video-01-model-rankings-prototype.mp4",
+    "duration_seconds": 180,
+    "aspect_ratio": "9:16",
+    "status": "prototype",
+    "claim_level": "L1",
+    "evidence_note": "示意数据；发布前替换为真实实验记录"
+  },
+  {
+    "id": "video-02",
+    "title": "一次评测为什么不够？",
+    "file": "video-02-minimal-eval-prototype.mp4",
+    "duration_seconds": 180,
+    "aspect_ratio": "9:16",
+    "status": "prototype",
+    "claim_level": "L1",
+    "evidence_note": "示意数据；发布前替换为真实实验记录"
+  }
+]
