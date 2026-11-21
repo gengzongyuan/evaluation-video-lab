@@ -29,3 +29,12 @@
 | LF-19 | OTEL 认证门与 Trace ID 回读 | 迁移 | `lf19-otel-auth-readback-lesson.md` | `videos/LF-19-otel-auth-readback-prototype.mp4` | prototype | L1 |
 | LF-20 | OTEL headers、flush 与实时性 | 迁移 | `lf20-otel-headers-realtime-lesson.md` | `videos/LF-20-otel-headers-realtime-prototype.mp4` | prototype | L1 |
 | LF-21 | Dataset run、Score 写入与实验回读 | 进阶 | `lf21-dataset-score-readback-lesson.md` | — | scripted | L1 |
+
+
+## 快切 v2 样片
+
+| 集数 | 视频 | 字幕 | 状态 | 媒体门 |
+|---|---|---|---|---|
+| LF-01 | `videos/LF-01-langfuse-overview-v2.mp4` | `captions/LF-01-v2.srt` / `.vtt` | prototype / L1 | PASS：12 镜头、非静音、抽帧有变化 |
+| LF-02 | `videos/LF-02-trace-v2.mp4` | `captions/LF-02-v2.srt` / `.vtt` | prototype / L1 | PASS：12 镜头、非静音、抽帧有变化 |
+| LF-03 | 待生成 | 待生成 | scripted | 按 v2 门禁验收 |
