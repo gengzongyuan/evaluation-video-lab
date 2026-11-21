@@ -15,4 +15,4 @@
 
 一棵完整的调用树能帮助排障，不自动证明任务质量、工具安全或所有分支都被采样。当前项目 Key 缺失，正式回读保持 BLOCKED。
 
-来源：<https://langfuse.com/docs/observability/features/agent-observability>、<https://langfuse.com/docs/observability/data-model>。
+来源：<https://langfuse.com/docs/observability>、<https://langfuse.com/docs/observability/data-model>。

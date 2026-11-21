@@ -15,4 +15,4 @@
 
 官方安全和采样文档证明配置能力，不证明你的部署已经安全。当前实例使用 HTTP 内网地址，不能在公开视频中暴露；正式上线门禁需单独核对 TLS、权限、保留和脱敏运行证据。
 
-来源：<https://langfuse.com/docs/observability/features/sampling>、<https://langfuse.com/docs/security-and-privacy>。
+来源：<https://langfuse.com/docs/observability/features/sampling>、<https://langfuse.com/docs/administration/data-retention>。

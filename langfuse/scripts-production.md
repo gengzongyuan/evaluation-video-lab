@@ -8,7 +8,7 @@
 
 **演示步骤**：固定模型和日期；执行一次调用；记录 input/output token、currency、模型名、时间戳；把价格来源 URL 与检索日期写入旁白卡；用公式 `input_tokens × input_price + output_tokens × output_price` 计算示例成本。
 
-**官方来源**：https://langfuse.com/docs/observability/features/token-and-cost-tracking
+**官方来源**：https://langfuse.com/docs/observability
 
 **边界**：若 usage 未被 SDK/模型提供商返回，不可假设成本准确；价格必须注明检索日期，不把示意价格说成当前报价。
 
@@ -20,7 +20,7 @@
 
 **演示步骤**：执行一次包含检索或工具调用的流程；打开 Trace timeline；记录 observation start/end、Generation latency 与子 Span；选择一次慢样本和一次基线样本并排查看；不得用单次延迟宣称系统性能改善。
 
-**官方来源**：https://langfuse.com/docs/observability/features/latency-and-performance
+**官方来源**：https://langfuse.com/docs/observability
 
 **边界**：客户端网络、队列、冷启动和服务端计时口径可能不同；先写清测量点和环境。
 
@@ -30,7 +30,7 @@
 
 **演示步骤**：选定一个生产时间窗口；按 release/environment/user group 分组；展示 traces、scores、latency、token/cost 和 error 事件；点击一个异常分组回到原始 Trace；把阈值、负责人和处理动作记录在监控说明中。
 
-**官方来源**：https://langfuse.com/docs/observability/overview；https://langfuse.com/docs/observability/features/sessions；https://langfuse.com/docs/observability/features/scores
+**官方来源**：https://langfuse.com/docs/observability/overview；https://langfuse.com/docs/observability；https://langfuse.com/docs/observability/features/scores
 
 **边界**：监控图表只说明观测到的窗口；阈值需要业务基线，不能凭示意数据直接报警或回滚。
 

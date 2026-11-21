@@ -19,4 +19,4 @@
 
 Score API/SDK 的具体参数按当前官方文档核对；没有真实写入和回读，不能声称评分成功。当前项目 Key 缺失，正式评分演示保持 BLOCKED。
 
-来源：<https://langfuse.com/docs/evaluation/overview>、<https://langfuse.com/docs/observability/features/scores>、<https://langfuse.com/docs/api/scores>。
+来源：<https://langfuse.com/docs/evaluation/overview>、<https://langfuse.com/docs/observability/features/scores>、<https://langfuse.com/docs/evaluation/overview>。

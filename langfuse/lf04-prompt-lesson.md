@@ -15,4 +15,4 @@
 
 官方文档可以证明功能和字段语义，不能证明当前项目权限、当前 UI 布局或某个版本已经发布成功。当前实例没有安全注入项目 Key，因此本集先按概念演示；真实 UI/API 录制需重新运行并保存版本号、label、Trace ID 和原始输入。
 
-来源：<https://langfuse.com/docs/prompt-management>、<https://langfuse.com/docs/prompt-management/features/version-control>。
+来源：<https://langfuse.com/docs/prompt-management>、<https://langfuse.com/docs/prompt-management>。

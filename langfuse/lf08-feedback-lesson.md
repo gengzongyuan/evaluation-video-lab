@@ -15,4 +15,4 @@
 
 反馈回流能建立数据闭环，不自动代表真实用户总体满意度；必须保留采样方式、缺失反馈和隐私处理。当前项目 Key 缺失，正式写入/回读保持 BLOCKED。
 
-来源：<https://langfuse.com/docs/evaluation/evaluation-methods/user-feedback>、<https://langfuse.com/docs/observability/features/scores>。
+来源：<https://langfuse.com/guides/user-feedback-loop>、<https://langfuse.com/docs/observability/features/scores>。

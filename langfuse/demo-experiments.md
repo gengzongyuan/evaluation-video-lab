@@ -36,7 +36,7 @@
 
 **不能证明**：版本标签存在不等于业务效果提升；必须用同一 Dataset 和评分规则另做实验。
 
-**来源**：https://langfuse.com/docs/prompt-management 、https://langfuse.com/docs/prompt-management/features/version-control
+**来源**：https://langfuse.com/docs/prompt-management 、https://langfuse.com/docs/prompt-management
 
 ## 发布前证据
 

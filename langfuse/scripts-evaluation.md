@@ -21,7 +21,7 @@
 3. 在应用代码中拉取该 Prompt，填入一条脱敏问题并执行一次 Generation。
 4. 打开对应 Trace，核对 Prompt 版本、输入、输出和时间戳。
 
-**官方来源**：https://langfuse.com/docs/prompt-management；https://langfuse.com/docs/observability/features/prompts
+**官方来源**：https://langfuse.com/docs/prompt-management；https://langfuse.com/docs/prompt-management
 
 **边界**：不能据此宣称某个 Prompt 版本质量更好；需要数据集和评分结果。
 

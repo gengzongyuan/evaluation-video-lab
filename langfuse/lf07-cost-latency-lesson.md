@@ -15,4 +15,4 @@
 
 官方文档说明字段和配置方式；一次本地 Trace 不能推出长期平均延迟、成本或模型整体效率。当前实例没有安全项目 Key，正式回读保持 BLOCKED。
 
-来源：<https://langfuse.com/docs/observability/features/tokens-costs>、<https://langfuse.com/docs/observability/data-model>。
+来源：<https://langfuse.com/docs/observability>、<https://langfuse.com/docs/observability/data-model>。

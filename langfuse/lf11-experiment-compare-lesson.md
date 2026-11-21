@@ -14,4 +14,4 @@
 
 实验框架能提高可重复性，不自动解决 Dataset 偏差、评分者偏差或统计显著性。当前没有项目 Key，正式 run/回读保持 BLOCKED。
 
-来源：<https://langfuse.com/docs/evaluation/experiments>、<https://langfuse.com/docs/prompt-management/features/prompt-experiments>。
+来源：<https://langfuse.com/docs/evaluation/experiments>、<https://langfuse.com/docs/prompt-management>。
