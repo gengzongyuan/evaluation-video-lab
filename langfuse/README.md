@@ -17,3 +17,7 @@
 - 每集必须有一个可复现实验或界面动作；只有概念时明确标注“概念演示”。
 - 不把未运行的 API 调用写成已验证结果；不把示意数据写成 Langfuse 性能或模型结论。
 - 每集成片目标约 180 秒，状态写入 `manifest.json` 或对应脚本元数据。
+
+## 路径约定
+
+`manifest.json` 中的 `script` 与 `video` 均使用仓库根目录相对路径，例如 `langfuse/videos/LF-01-...mp4`；校验工具从 `evaluation-video-lab/` 根目录解析。`prototype` 表示可播放原型，`scripted` 表示只有脚本，`verified` 需要真实实例 UI/API 证据。
