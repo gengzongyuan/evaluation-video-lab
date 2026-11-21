@@ -101,3 +101,9 @@
 
 - [x] 已建立可直接填写的真实录制表，涵盖版本、命令、Trace/Observation ID、UI/API、脱敏和结论。
 - [ ] 当前仍缺安全项目 Key 和新运行 ID，表单尚未形成 PASS 记录。
+
+## LF-04–15 录制表与自动校验
+
+- [x] LF-04–08、LF-09–12、LF-13–15 录制表已建立。
+- [x] `python3 langfuse/validate_manifest.py` 通过：`episodes=15`、路径和证据字段完整。
+- [ ] 真实运行记录仍未填入；视频保持 `prototype / L1`。
