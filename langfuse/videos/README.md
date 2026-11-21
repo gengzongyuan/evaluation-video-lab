@@ -8,3 +8,4 @@
 - `LF-04-prompt-management-prototype.mp4`：180 秒、9:16���中文旁白；主题是 Prompt 集中管理、版本和 label。当前为方法原型，真实 UI/API 发布待项目 Key 注入后验证。
 - `LF-07-cost-latency-prototype.mp4`：180 秒、9:16、中文旁白；主题是 Generation 的 model、usage、latency 和 cost 字段，当前为方法原型。
 - `LF-10-agent-observability-prototype.mp4`：180 秒、9:16、中文旁白；主题是多步骤 Agent 的调用树与 API 回读，当前为方法原型。
+- `LF-13-self-hosting-prototype.mp4`：180 秒、9:16、中文旁白；主题是自托管组件和健康检查，当前为方法原型。
