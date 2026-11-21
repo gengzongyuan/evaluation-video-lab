@@ -145,3 +145,8 @@
 - [x] 只读检查确认 health `OK / 4.79.0`、manifest 15 集通过、视频 QA 无坏文件。
 - [x] 检查确认当前 shell 没有项目 Key/Base URL；未尝试写入或伪造 Trace。
 - [ ] LF-01 新 Trace 写入和 UI/API 回读保持 `blocked`，等待受保护凭据环境。
+
+## 安全运行脚本
+
+- [x] 新增 `langfuse/scripts/check-runtime.sh`，只检查变量存在、health 和版本，不打印 Secret。
+- [x] 无凭据负向测试返回退出码 2，未泄露任何值。
