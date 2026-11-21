@@ -56,3 +56,5 @@
 | LF-10 | 多步骤 Agent 调用树 | 快切 v2 | `lf10-agent-observability-lesson.md`、`lf10-fact-audit.md` | `videos/LF-10-agent-tree-v2.mp4` | prototype | L1 |
 
 | LF-11 | 同 Dataset 比较 Prompt / 模型 | 快切 v2 | `lf11-experiment-compare-lesson.md`、`lf11-fact-audit.md` | `videos/LF-11-experiment-compare-v2.mp4` | prototype | L1 |
+
+| LF-12 | 异常 Trace 到修复和回归 | 快切 v2 | `lf12-debugging-loop-lesson.md`、`lf12-fact-audit.md` | `videos/LF-12-debug-regression-v2.mp4` | prototype | L1 |
