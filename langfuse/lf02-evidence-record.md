@@ -4,6 +4,8 @@
 
 当前实例健康端点已验证：`http://172.16.33.136:3000/api/public/health?failIfDatabaseUnavailable=true` 返回 `status=OK, version=4.79.0`（2026-11-21）。
 
+现场探针记录见 `evidence/lab02-live-probe-2026-11-22.md`；健康端点返回 `OK / 4.79.0`，而旧 `/api/public/traces` 与 `/api/public/observations` 均返回 HTTP 404，并明确提示该实例运行在 v4 `events_only` 模式，应迁移到 OTEL 写入协议。因此，本轮不能把历史 HTML/PNG 回读当成当前版本的实时证据。
+
 本仓库没有可安全使用的项目 Secret，也没有在当前工作区安装 Langfuse SDK，因此本轮**没有声称新建 Trace**。已有历史实验文档记录过一次 API 回读：HTTP 200、示例 Trace ID `20c59f22901395c45fca45debec026e2`，包含根 `AGENT` Observation 和一个 `GENERATION` Observation，最终输出为 `LAB01_READY`。该记录来自外部实验文档，不能替代当前版本重跑。
 
 ## 视频可讲的知识点
