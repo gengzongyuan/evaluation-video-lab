@@ -18,3 +18,10 @@
 | LF-01 | 课程地图 | `langfuse/curriculum-map.md` | running |
 | LF-02 | 入门编剧 | `langfuse/scripts-beginner.md` | running |
 | LF-03 | 评测/实验编剧 | `langfuse/scripts-evaluation.md` | running |
+
+## Langfuse 第三轮补充
+
+| 任务 | 产物 | 证据 |
+|---|---|---|
+| LF-07 | `langfuse/source-verification.md` | 5 个官方页面 HTTP 200 |
+| LF-08 | `langfuse/demo-checklist-beginner.md` | 入门 1–3 集录屏与放行清单 |

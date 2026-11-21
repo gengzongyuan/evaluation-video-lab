@@ -13,7 +13,9 @@
       "official_sources": [
         "https://langfuse.com/docs",
         "https://langfuse.com/docs/sdk"
-      ]
+      ],
+      "source_verification": "langfuse/source-verification.md",
+      "recording_checklist": "langfuse/demo-checklist-beginner.md"
     },
     {
       "id": "LF-02",
@@ -26,7 +28,9 @@
         "https://langfuse.com/docs/observability/overview",
         "https://langfuse.com/docs/observability/data-model"
       ],
-      "evidence": "local health endpoint observed 2026-11-21; trace write/UI still pending"
+      "evidence": "local health endpoint observed 2026-11-21; trace write/UI still pending",
+      "source_verification": "langfuse/source-verification.md",
+      "recording_checklist": "langfuse/demo-checklist-beginner.md"
     },
     {
       "id": "LF-03",
@@ -38,7 +42,9 @@
       "official_sources": [
         "https://langfuse.com/docs/observability/data-model"
       ],
-      "evidence": "demo plan prepared; runtime verification pending"
+      "evidence": "demo plan prepared; runtime verification pending",
+      "source_verification": "langfuse/source-verification.md",
+      "recording_checklist": "langfuse/demo-checklist-beginner.md"
     },
     {
       "id": "LF-04",
@@ -50,7 +56,8 @@
       "official_sources": [
         "https://langfuse.com/docs/prompt-management"
       ],
-      "evidence": "demo plan prepared; runtime verification pending"
+      "evidence": "demo plan prepared; runtime verification pending",
+      "source_verification": "langfuse/source-verification.md"
     },
     {
       "id": "LF-05",
@@ -62,7 +69,8 @@
       "official_sources": [
         "https://langfuse.com/docs/datasets",
         "https://langfuse.com/docs/evaluation/experiments"
-      ]
+      ],
+      "source_verification": "langfuse/source-verification.md"
     },
     {
       "id": "LF-06",
