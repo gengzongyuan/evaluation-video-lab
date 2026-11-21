@@ -13,7 +13,7 @@
 
 ## 证据
 
-本地保存的官方文档快照说明：Python SDK v5、JS/TS SDK v6 采用 OpenTelemetry；自托管 v4 `events_only` 拒绝旧 ingestion；OTEL endpoint 可用于写入。当前实例现场探针也返回相同迁移提示。具体 SDK 参数、headers 和查询方式在录制当天按官方页面重新核对。
+本地保存的官方文档快照说明：Python SDK v5、JS/TS SDK v6 采用 OpenTelemetry；自托管 v4 `events_only` 拒绝旧 ingestion；OTEL endpoint 可用于写入。官方 v4-ready OTEL 请求还要求项目 Basic Auth 和 `x-langfuse-ingestion-version: 4`，见 `evidence/lab02-official-v4-audit-2026-11-22.md`。当前实例现场探针也返回相同迁移提示。具体 SDK 参数、headers 和查询方式在录制当天按官方页面重新核对。
 
 来源：<https://langfuse.com/docs/observability/sdk/overview>、<https://langfuse.com/docs/observability/sdk/upgrade-path>、<https://langfuse.com/integrations/native/opentelemetry>。
 

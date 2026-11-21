@@ -78,6 +78,7 @@
 - `langfuse/lf19-otel-auth-readback-lesson.md`
 - `langfuse/lf16-v4-otel-migration-lesson.md`
 - `langfuse/evidence/lf16-otel-endpoint-probe-2026-11-22.md`
+- `langfuse/evidence/lab02-official-v4-audit-2026-11-22.md`（官方 v4 endpoint、Basic Auth 与 `x-langfuse-ingestion-version: 4`）
 - `langfuse/evidence/lab02-raw-integrity-2026-11-22.md`
 - `langfuse/source-link-audit-2026-11-22.md`
 - 具体 headers、属性名和 exporter 行为必须在录制当天重新核对 Langfuse 官方当前文档；本文件不把示意字段当成已运行事实。

@@ -25,6 +25,8 @@
 
 ## 原始证据索引
 
+- 官方 v4 迁移核验：`evidence/lab02-official-v4-audit-2026-11-22.md`（OTEL endpoint、Basic Auth、`x-langfuse-ingestion-version: 4` 与 endpoint 口径）
+
 - `evidence/raw/lab02-health-2026-11-22-0044.json`
 - `evidence/raw/lab02-web-ready-2026-11-22-0044.json`
 - `evidence/raw/lab02-gateway-health-2026-11-22-0044.json`

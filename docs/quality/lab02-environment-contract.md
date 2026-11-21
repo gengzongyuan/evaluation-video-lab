@@ -47,6 +47,7 @@
 - 运行时采样：[`langfuse/evidence/runtime-discovery-2026-11-22-0044.md`](../../langfuse/evidence/runtime-discovery-2026-11-22-0044.md)
 - 旧 API 探针：[`langfuse/evidence/lab02-live-probe-2026-11-22.md`](../../langfuse/evidence/lab02-live-probe-2026-11-22.md)
 - 证据桥接：[`langfuse/evidence/lab02-document-bridge-2026-11-22.md`](../../langfuse/evidence/lab02-document-bridge-2026-11-22.md)
+- 官方 v4 迁移核验：[`langfuse/evidence/lab02-official-v4-audit-2026-11-22.md`](../../langfuse/evidence/lab02-official-v4-audit-2026-11-22.md)
 - 原始完整性：[`langfuse/evidence/lab02-raw-integrity-2026-11-22.md`](../../langfuse/evidence/lab02-raw-integrity-2026-11-22.md)
 - 原始响应清单：[`langfuse/evidence/raw/SHA256SUMS-2026-11-22.txt`](../../langfuse/evidence/raw/SHA256SUMS-2026-11-22.txt)
 
