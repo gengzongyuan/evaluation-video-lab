@@ -50,3 +50,5 @@
 | LF-07 | 成本、token usage 和延迟 | 快切 v2 | `lf07-cost-latency-lesson.md`、`lf07-fact-audit.md` | `videos/LF-07-cost-latency-v2.mp4` | prototype | L1 |
 
 | LF-08 | 用户反馈回流 Score | 快切 v2 | `lf08-feedback-lesson.md`、`lf08-fact-audit.md` | `videos/LF-08-feedback-v2.mp4` | prototype | L1 |
+
+| LF-09 | Sampling、脱敏、保留和治理 | 快切 v2 | `lf09-production-governance-lesson.md`、`lf09-fact-audit.md` | `videos/LF-09-governance-v2.mp4` | prototype | L1 |
