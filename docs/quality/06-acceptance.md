@@ -167,3 +167,8 @@
 
 - [x] 新增无凭据 Python SDK v5/OTEL 参考代码，并通过 `py_compile`。
 - [ ] 参考代码未在当前环境运行；当前 Trace 写入仍为 BLOCKED。
+
+## LF-17 Health/Readiness
+
+- [x] health/readiness 差异已形成脚本、证据摘要和 180 秒视频原型。
+- [ ] 运行时探针不替代 OTEL Trace 写入或 Worker/UI/API 端到端验证。

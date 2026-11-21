@@ -162,6 +162,16 @@
       "status": "prototype",
       "claim_level": "L1",
       "evidence_note": "current probe and archived official docs; new OTEL write still pending protected key"
+    },
+    {
+      "id": "LF-17",
+      "title": "Health 通过，为什么链路还不能用？",
+      "level": "生产",
+      "script": "langfuse/lf17-health-readiness-lesson.md",
+      "video": "langfuse/videos/LF-17-health-readiness-prototype.mp4",
+      "status": "prototype",
+      "claim_level": "L1",
+      "evidence_note": "read-only runtime probe; no Trace write proof"
     }
   ],
   "next_depth_question": "Trace、Span、Generation 的最小可运行示例，如何在视频中同时展示代码、UI 和一条真实 trace？",
