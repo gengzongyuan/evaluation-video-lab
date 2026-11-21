@@ -32,3 +32,12 @@
 - 录制出现真实业务文本：立即删除素材并重新生成脱敏输入。
 
 依据：本仓库 `LANGFUSE_DEPLOYED_INSTANCE_172.16.33.136.md`、`LANGFUSE_DEPLOYMENT_RUNBOOK.md` 的实例与验收记录；具体 SDK 参数以官方文档当前版本为准。
+
+## v4 events_only 现场补充（2026-11-22）
+
+当前 4.79.0 实例的旧 `/api/public/traces` 与 `/api/public/observations` 查询路径返回 404，响应建议使用升级后的 SDK/OTEL 协议。下一次受保护运行必须：
+
+1. 使用当前官方 SDK/OTEL 接入方式发送 Trace（目标入口为 `/api/public/otel/v1/traces`，具体 headers/字段以当前官方文档为准）。
+2. 保存 OTEL 发送响应、Trace ID、SDK 版本和运行 commit。
+3. 使用当前 v4 支持的 UI/API 查询方法回读，不能继续把旧版 endpoint 当作验收命令。
+4. 将旧路径 404 作为迁移边界写进视频，避免观众照抄过时命令。
