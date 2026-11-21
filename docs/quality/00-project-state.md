@@ -60,3 +60,10 @@
 - manifest：`langfuse/manifest.json`，登记 6 集脚本及官方来源。
 - 可播放原型：`langfuse/videos/LF-01-langfuse-overview-prototype.mp4`，ffprobe 验证 180 秒。
 - 当前成熟度：`precheckable`；真实实例演示尚未完成。
+
+## 第二轮 Langfuse 资产
+
+- 来源审计：`langfuse/source-audit.md`。
+- LF-02 录制清单：`langfuse/recording-checklist-trace.md`。
+- LF-03/LF-04 演示实验：`langfuse/demo-experiments.md`。
+- 2026-11-21 已请求本地实例 `/api/public/health?failIfDatabaseUnavailable=true`，返回 JSON 且实例记录为 4.79.0；Trace 写入与 UI 查���仍待真实 SDK 运行验证。
