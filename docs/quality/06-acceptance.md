@@ -48,3 +48,9 @@
 - [x] LF-04 Prompt 管理、LF-05 Dataset、LF-06 Evaluation/Score 知识卡已写入。
 - [x] LF-04 已生成 180 秒视频原型，状态 `prototype / L1`。
 - [ ] LF-05 Dataset run 与 LF-06 Score 写入/回读仍待真实项目 Key 和 SDK/API 运行。
+
+## Langfuse LF-07–09
+
+- [x] 成本/延迟、用户反馈、生产治理三集知识卡已写入。
+- [x] LF-07 已生成 180 秒视频原型，状态 `prototype / L1`。
+- [ ] LF-08 反馈 Score 写入、LF-09 生产采样/脱敏/权限运行证据仍待真实环境验证。
