@@ -54,3 +54,5 @@
 | LF-09 | Sampling、脱敏、保留和治理 | 快切 v2 | `lf09-production-governance-lesson.md`、`lf09-fact-audit.md` | `videos/LF-09-governance-v2.mp4` | prototype | L1 |
 
 | LF-10 | 多步骤 Agent 调用树 | 快切 v2 | `lf10-agent-observability-lesson.md`、`lf10-fact-audit.md` | `videos/LF-10-agent-tree-v2.mp4` | prototype | L1 |
+
+| LF-11 | 同 Dataset 比较 Prompt / 模型 | 快切 v2 | `lf11-experiment-compare-lesson.md`、`lf11-fact-audit.md` | `videos/LF-11-experiment-compare-v2.mp4` | prototype | L1 |
