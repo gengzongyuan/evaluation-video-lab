@@ -1,0 +1,78 @@
+{
+  "series": "Langfuse 3分钟微课",
+  "status": "in_progress",
+  "source_policy": "official-docs-first",
+  "episodes": [
+    {
+      "id": "LF-01",
+      "title": "Langfuse 是什么：给 LLM 应用装一台黑匣子",
+      "level": "入门",
+      "script": "langfuse/scripts-beginner.md",
+      "status": "scripted",
+      "claim_level": "L1",
+      "official_sources": [
+        "https://langfuse.com/docs",
+        "https://langfuse.com/docs/sdk"
+      ]
+    },
+    {
+      "id": "LF-02",
+      "title": "Trace 是什么：把一次请求还原成调用树",
+      "level": "入门",
+      "script": "langfuse/scripts-beginner.md",
+      "status": "scripted",
+      "claim_level": "L1",
+      "official_sources": [
+        "https://langfuse.com/docs/observability/overview",
+        "https://langfuse.com/docs/observability/data-model"
+      ]
+    },
+    {
+      "id": "LF-03",
+      "title": "Span 和 Generation 怎么区分",
+      "level": "入门",
+      "script": "langfuse/scripts-beginner.md",
+      "status": "scripted",
+      "claim_level": "L1",
+      "official_sources": [
+        "https://langfuse.com/docs/observability/data-model"
+      ]
+    },
+    {
+      "id": "LF-04",
+      "title": "Prompt 为什么要集中管理",
+      "level": "基础",
+      "script": "langfuse/scripts-evaluation.md",
+      "status": "scripted",
+      "claim_level": "L1",
+      "official_sources": [
+        "https://langfuse.com/docs/prompt-management"
+      ]
+    },
+    {
+      "id": "LF-05",
+      "title": "Dataset 与可重复实验",
+      "level": "进阶",
+      "script": "langfuse/scripts-evaluation.md",
+      "status": "scripted",
+      "claim_level": "L1",
+      "official_sources": [
+        "https://langfuse.com/docs/datasets",
+        "https://langfuse.com/docs/evaluation/experiments"
+      ]
+    },
+    {
+      "id": "LF-06",
+      "title": "Evaluation、Score 与失败样本",
+      "level": "进阶",
+      "script": "langfuse/scripts-evaluation.md",
+      "status": "scripted",
+      "claim_level": "L1",
+      "official_sources": [
+        "https://langfuse.com/docs/evaluation/overview",
+        "https://langfuse.com/docs/observability/features/scores"
+      ]
+    }
+  ],
+  "next_depth_question": "Trace、Span、Generation 的最小可运行示例，如何在视频中同时展示代码、UI 和一条真实 trace？"
+}

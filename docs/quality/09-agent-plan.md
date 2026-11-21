@@ -10,3 +10,11 @@
 | 2 | V06 生产看板 | `content/production-board.md` | running |
 
 并行依据：每个任务写入独立文件，无共享权威状态写入；主 agent 汇合后更新状态、决策、风险与验收记录。
+
+## Langfuse 微课批次
+
+| 任务 | 角色 | 独占输出 | 状态 |
+|---|---|---|---|
+| LF-01 | 课程地图 | `langfuse/curriculum-map.md` | running |
+| LF-02 | 入门编剧 | `langfuse/scripts-beginner.md` | running |
+| LF-03 | 评测/实验编剧 | `langfuse/scripts-evaluation.md` | running |

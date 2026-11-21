@@ -45,3 +45,18 @@
 - 两条 180 秒可播放竖屏视频原型已生成：`videos/`。
 - `ffprobe` 验证两条视频均为 `duration=180.000000`；视频清单记录状态为 `prototype`、证据等级 `L1`。
 - 事实核验包已由子任务提交：`a97b8ed`，位置为 `docs/fact-check/video-fact-check.md`。
+
+## Goal 切换：Langfuse 微课
+
+- 当前长期 Goal：把 Langfuse 官方知识体系持续转译成由浅入深的 3 分钟视频系列。
+- 当前阶段：课程地图与第一批脚本，状态 `in_progress`。
+- 本轮并行任务：LF-01 课程地图、LF-02 入门脚本、LF-03 评测/实验脚本。
+- 本轮质量门：官方来源可回指、每集有一句话结果、演示步骤和事实边界；未运行内容不得宣称已验证。
+
+## Langfuse 微课第一批结果
+
+- 课程地图：`langfuse/curriculum-map.md`，20 集。
+- 脚本：`langfuse/scripts-beginner.md`（LF-01–03）、`langfuse/scripts-evaluation.md`（LF-04–06）。
+- manifest：`langfuse/manifest.json`，登记 6 集脚本及官方来源。
+- 可播放原型：`langfuse/videos/LF-01-langfuse-overview-prototype.mp4`，ffprobe 验证 180 秒。
+- 当前成熟度：`precheckable`；真实实例演示尚未完成。
