@@ -13,3 +13,8 @@
 - `LF-16-v4-otel-migration-prototype.mp4`：180 秒、9:16、中文旁白；主题是 v4 events_only、旧 API 404 和 OTEL 迁移方向。
 - `LF-17-health-readiness-prototype.mp4`：180 秒、9:16、中文旁白；主题是 health/readiness 差异与链路证据边界。
 - `LF-18-gateway-readiness-prototype.mp4`：180 秒、9:16、中文旁白；主题是 Gateway health/readiness/真实请求三层判断。
+
+
+## 2026-11-22 画面复核
+
+此前原型只验证了时长和音视频流，抽帧发现画面几乎为纯色，不能满足可观看门槛。已重新生成 LF-01–LF-20 的可见课程卡片画面，并抽帧确认标题、核心问题、证据等级和边界文字可见。它们仍是 `prototype / L1`，后续要替换为真实 UI/录屏。
