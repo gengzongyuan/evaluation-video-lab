@@ -16,3 +16,7 @@
 本地保存的官方文档快照说明：Python SDK v5、JS/TS SDK v6 采用 OpenTelemetry；自托管 v4 `events_only` 拒绝旧 ingestion；OTEL endpoint 可用于写入。当前实例现场探针也返回相同迁移提示。具体 SDK 参数、headers 和查询方式在录制当天按官方页面重新核对。
 
 来源：<https://langfuse.com/docs/observability/sdk/overview>、<https://langfuse.com/docs/observability/sdk/upgrade-path>、<https://langfuse.com/integrations/native/opentelemetry>。
+
+## 现场探针补充
+
+当前实例的 OTEL 路径对 OPTIONS 返回 204，对空 JSON POST 返回 401；这只证明入口和认证门存在，不证明 Trace 已写入。真实演示必须用受保护项目 Key 和当前 SDK/OTEL exporter 发送脱敏 payload。

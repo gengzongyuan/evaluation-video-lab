@@ -156,3 +156,9 @@
 - [x] v4 events_only、旧 API 404 和 OTEL 迁移方向已形成脚本与视频原型。
 - [x] LF-16 视频通过 180 秒音视频流 QA。
 - [ ] OTEL 新 Trace 写入仍待受保护项目 Key 和当前 SDK 实跑。
+
+## LF-16 OTEL 入口探针
+
+- [x] OTEL 入口只读/空请求探针已完成：OPTIONS 204、空 POST 401、未发送业务数据。
+- [x] 迁移课已明确入口可达不等于 Trace 写入成功。
+- [ ] 受保护 Key 下的 OTLP payload、Trace ID 和回读仍待执行。
