@@ -16,6 +16,7 @@
 - LF-01–LF-20 资产审计通过：20/20 有脚本、MP4、SRT 和 VTT，全部保持 `prototype / L1`；LF-21 有脚本，保持 `scripted / L1`。
 - 快切 v2 样片已扩展到 LF-01–LF-03：每集 12 个约 15 秒镜头、中文旁白、非静音音频和多时间点画面变化；LF-02 字幕时间码与乱码已修复。
 - 快切 v2 样片已扩展到 LF-01–LF-06；LF-06 覆盖评分规则、Score 关联、评估器版本、高低分和失败样本，媒体门通过，仍保持 `prototype / L1`。
+- 快切 v2 样片已扩展到 LF-01–LF-09；LF-09 覆盖 sampling、脱敏、保留、权限、密钥轮换和告警，字幕乱码已修复，媒体门通过，仍保持 `prototype / L1`。
 - 本轮验证命令：`python3 langfuse/validate_manifest.py` 通过；在 `langfuse/evidence/raw/` 执行 `shasum -a 256 -c SHA256SUMS-2026-11-22.txt` 全部通过。
 
 ## 已完成证据
