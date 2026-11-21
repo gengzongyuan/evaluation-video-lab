@@ -67,3 +67,11 @@
 - LF-02 录制清单：`langfuse/recording-checklist-trace.md`。
 - LF-03/LF-04 演示实验：`langfuse/demo-experiments.md`。
 - 2026-11-21 已请求本地实例 `/api/public/health?failIfDatabaseUnavailable=true`，返回 JSON 且实例记录为 4.79.0；Trace 写入与 UI 查���仍待真实 SDK 运行验证。
+
+## Langfuse LF-03 结果
+
+- 类型卡：`langfuse/lf03-type-card.md`。
+- 安全口播：`langfuse/lf03-script-revision.md`。
+- 演示计划：`langfuse/lf03-demo-plan.md`。
+- 视频原型：`langfuse/videos/LF-03-span-generation-prototype.mp4`，ffprobe 验证 180 秒。
+- 当前状态：`prototype / L1`；真实调用树仍等待项目 Key 与 SDK 运行证据。

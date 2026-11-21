@@ -36,3 +36,9 @@
 - [x] LF-02 证据记录区分官方概念、历史 API 回读和当前实例未重跑状态。
 - [x] LF-02 180 秒旁白视频原型已生成，标记 `prototype / L1`。
 - [ ] 当前项目 Secret、SDK 写入、UI 回读和新 Trace ID 尚未完成；正式产品演示保持 `BLOCKED`。
+
+## Langfuse LF-03 Span/Generation
+
+- [x] 类型卡、脚本修订版和可执行演示计划已落库。
+- [x] LF-03 180 秒旁白视频原型已生成，状态 `prototype / L1`。
+- [ ] 当前实例 Span/Generation/Tool 调用树尚未用新 Trace ID 回读；正式演示保持 `BLOCKED`。

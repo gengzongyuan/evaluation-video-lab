@@ -39,14 +39,16 @@
       "title": "Span 和 Generation 怎么区分",
       "level": "入门",
       "script": "langfuse/scripts-beginner.md",
-      "status": "scripted",
+      "status": "prototype",
       "claim_level": "L1",
       "official_sources": [
         "https://langfuse.com/docs/observability/data-model"
       ],
       "evidence": "demo plan prepared; runtime verification pending",
       "source_verification": "langfuse/source-verification.md",
-      "recording_checklist": "langfuse/demo-checklist-beginner.md"
+      "recording_checklist": "langfuse/demo-checklist-beginner.md",
+      "video": "langfuse/videos/LF-03-span-generation-prototype.mp4",
+      "evidence_note": "type card and demo plan prepared; fresh current-instance call tree blocked pending project key"
     },
     {
       "id": "LF-04",
