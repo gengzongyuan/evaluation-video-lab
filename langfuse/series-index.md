@@ -46,3 +46,5 @@
 | LF-05 | Dataset 与可重复实验 | 快切 v2 | `lf05-dataset-lesson.md`、`lf05-fact-audit.md` | `videos/LF-05-dataset-v2.mp4` | prototype | L1 |
 
 | LF-06 | Evaluation、Score 与失败样本 | 快切 v2 | `lf06-score-lesson.md`、`lf06-fact-audit.md` | `videos/LF-06-score-v2.mp4` | prototype | L1 |
+
+| LF-07 | 成本、token usage 和延迟 | 快切 v2 | `lf07-cost-latency-lesson.md`、`lf07-fact-audit.md` | `videos/LF-07-cost-latency-v2.mp4` | prototype | L1 |
