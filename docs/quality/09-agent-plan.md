@@ -56,3 +56,38 @@ A1/A2 不修改视频、字幕、manifest、播放器或项目权威状态。主
 | LF18-S1 | gateway readiness 事实审计 | `langfuse/lf18-gateway-readiness-fact-audit.md` | queued |
 
 LF02-R2 的输入 `LF-02-voice-script-xiaoxiao.md` 和 `LF-02-shot-board-xiaoxiao.md` 已冻结。使用原速分段 Xiaoxiao，不拉伸补到 180 秒。只写上述独占文件，不改播放器、manifest、质量状态。主 agent 在汇合后抽帧、核对尾部静音和字幕时间轴，再决定是否登记。
+
+## Xiaoxiao 连续样片批次 3（2026-11-23）
+
+当前阶段：内容生产与媒体验证，`in_progress`。冻结契约：中文声线 `zh-CN-XiaoxiaoNeural`、`rate=-5%`；原速分段配音；每集由实际语音决定时长；约 20–24 个不同构图，通常每 6–10 秒明显变化；视频内直接烧录中文字幕并保留同时间轴 SRT/VTT；课程均为 `prototype / L1`，无项目 key 时不得声称真实 Trace、Dataset、Score、Worker 消费或回读已验证。
+
+| id | stage | role | goal | inputs | depends_on | write_scope | forbidden_write | shared_resources | verification | output | status |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| LF02-R3 | implementation + verification | 视频制作 | 交付可播放的 LF-02 原速 Xiaoxiao 成片、内嵌字幕及制作脚本 | 已冻结的 `langfuse/LF-02-voice-script-xiaoxiao.md`、`langfuse/LF-02-shot-board-xiaoxiao.md`；参考 `langfuse/scripts/render_lf01_xiaoxiao_v3.py` | 无 | `langfuse/scripts/render_lf02_xiaoxiao_v3.py`、`langfuse/videos/LF-02-trace-xiaoxiao-v3.mp4`、`langfuse/captions/LF-02-xiaoxiao-v3.srt`、`langfuse/captions/LF-02-xiaoxiao-v3.vtt`、`langfuse/lf02-xiaoxiao-v3-qa.md`、`langfuse/build/lf02-xiaoxiao-v3/` | 播放器、manifest、课程索引、质量状态、其他任务文件；不得 git commit/push | 本机 Edge TTS、ffmpeg@7；不得访问或写入真实 Langfuse 项目 | 运行自然旁白门；抽帧；检查 U+FFFD、字幕覆盖/结束时间、尾部静音、音视频时长差、唯一镜头数 | 上述成片、字幕、渲染器、QA 与固定格式交接 | running |
+| LF03-S4 | requirements + content | 口播与事实校对 | 把 LF-03 分镜冻结为适合 Xiaoxiao 的逐镜口播，并核验类型与证据边界 | `langfuse/LF-03-shot-board-xiaoxiao.md`、`langfuse/lf03-script-revision.md`、`langfuse/lf03-type-card.md`、`langfuse/lf03-demo-plan.md` 及录制当天 Langfuse 官方文档 | 无 | `langfuse/LF-03-voice-script-xiaoxiao.md`、`langfuse/lf03-xiaoxiao-fact-audit.md` | 视频、音频、字幕、渲染器、播放器、manifest、质量状态；不得 git commit/push | 只读官方文档；无真实项目写入 | 检查逐镜编号、口播与镜头一致、无乱码/敏感值；官方 URL 与概念逐项可回指 | 两份独占文档与固定格式交接 | running |
+| LF18-S1 | requirements + fact audit | 官方事实审计 | 核验 LF-18 gateway readiness 课程，区分端点可达、鉴权、Trace 写入和回读 | `langfuse/lf18-gateway-readiness-lesson.md`、`langfuse/evidence/lf18-gateway-probe.md` 及当前 Langfuse 官方文档 | 无 | `langfuse/lf18-gateway-readiness-fact-audit.md` | 视频、音频、字幕、播放器、manifest、质量状态、其他审计；不得 git commit/push | 只读官方文档和已有脱敏证据；不得触网真实项目或伪造运行结果 | 检查官方来源、事实/推断分离、无内网地址或凭据；记录能与不能证明的范围 | 独占审计文档与固定格式交接 | running |
+
+停止条件：输入冲突、需要扩大范围或需要真实项目凭据时停止对应动作并上报，不用猜测补齐。主 agent 独占 LF-01 乱码重渲染、所有汇合、抽帧终审、索引/播放器/manifest、质量台账和 Git 提交推送。任一任务完成后，由主 agent 汇合并立即派发下一项有独立产出的任务；Goal 保持 active。
+
+## Xiaoxiao 连续样片批次 4（2026-11-23）
+
+| id | stage | role | goal | inputs | depends_on | write_scope | forbidden_write | shared_resources | verification | output | status |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| LF03-R3 | implementation + verification | 视频制作 | 交付可播放的 LF-03 原速 Xiaoxiao 成片、内嵌字幕及制作脚本 | 已冻结的 `langfuse/LF-03-shot-board-xiaoxiao.md`、`langfuse/lf03-script-revision.md`、`langfuse/lf03-type-card.md`；参考 `langfuse/scripts/render_lf01_xiaoxiao_v3.py` 与 `langfuse/scripts/render_lf02_xiaoxiao_v3.py` | 无 | `langfuse/scripts/render_lf03_xiaoxiao_v3.py`、`langfuse/videos/LF-03-span-generation-xiaoxiao-v3.mp4`、`langfuse/captions/LF-03-xiaoxiao-v3.srt`、`langfuse/captions/LF-03-xiaoxiao-v3.vtt`、`langfuse/lf03-xiaoxiao-v3-qa.md`、`langfuse/build/lf03-xiaoxiao-v3/` | 播放器、manifest、课程索引、质量状态、其他集视频/字幕；不得 git commit/push | 本机 Edge TTS、ffmpeg@7；不得访问或写入真实 Langfuse 项目 | 运行自然旁白门；抽帧；检查 U+FFFD、字幕覆盖/结束时间、尾部静音、音视频时长差、唯一镜头数 | 上述成片、字幕、渲染器、QA 与固定格式交接 | running |
+| LF07-S7 | content | 分镜 | 把 LF-07 成本、token 与延迟拆成 20 段 Xiaoxiao 分镜 | `langfuse/lf07-cost-latency-lesson.md`、`langfuse/lf07-fact-audit.md`、`langfuse/lf07-v2-qa.md` | 无 | `langfuse/LF-07-shot-board-xiaoxiao.md` | 视频、音频、字幕、渲染器、播放器、manifest、质量状态；不得 git commit/push | 只读官方文档 | 20 镜连续编号、20 个唯一 layout、相邻构图不重复、无乱码/敏感值 | 独占分镜板与固定格式交接 | running |
+| LF20-S1 | requirements + fact audit | 官方事实审计 | 核验 LF-20 OTEL headers 与实时性课程，区分入口可达、认证、写入、回读和实时延迟 | `langfuse/lf20-otel-headers-realtime-lesson.md`、已有脱敏探针与官方文档 | 无 | `langfuse/lf20-otel-headers-realtime-fact-audit.md` | 视频、音频、字幕、播放器、manifest、质量状态、其他审计；不得 git commit/push | 只读官方文档和已有脱敏证据；不得伪造运行结果 | 检查官方来源、事实/推断分离、无内网地址或凭据；记录能与不能证明的范围 | 独占审计文档与固定格式交接 | running |
+
+## Xiaoxiao 连续样片批次 5（2026-11-23）
+
+冻结契约不变：`zh-CN-XiaoxiaoNeural`、`rate=-5%`；原速分段；画面内字幕；`prototype / L1`。
+
+| id | role | write_scope | status |
+|---|---|---|---|
+| LF04-R4 | 视频制作 | `langfuse/videos/LF-04-prompt-version-xiaoxiao-v3.mp4` 及字幕/渲染器/QA | done |
+| LF04-A4 | 独立媒体复核 | `langfuse/lf04-xiaoxiao-v3-independent-review.md` | done |
+| LF05-R5 | 视频制作 | `langfuse/videos/LF-05-dataset-xiaoxiao-v3.mp4` 及字幕/渲染器/QA | done |
+| LF06-R6 | 视频制作 | `langfuse/videos/LF-06-score-xiaoxiao-v3.mp4` 及字幕/渲染器/QA | running |
+| LF05-V5 | 口播冻结 | `langfuse/LF-05-voice-script-xiaoxiao.md` 到 LF-09 | running |
+| SCAN-S5 | 越界话术扫描 | `langfuse/xiaoxiao-v3-claim-scan-lf05-lf21.md` | running |
+
+主 agent 独占汇合、播放器/索引/质量台账和 Git 提交。Goal 保持 active。

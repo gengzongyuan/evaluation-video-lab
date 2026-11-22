@@ -21,6 +21,9 @@
 | 4 | 2026-11-22 | 选定的 Xiaoxiao 能否做成可直接看的原速短视频？ | 失败的拉伸版 Xiaoxiao、20 段口播稿、独立音画 FAIL | v3：168.7 秒、24 镜、画面内字幕、原速 AAC；播放器改链；LF-02 口播稿、LF-14/15 事实审计 | 原速旁白、烧录字幕、镜头构图变化、音视频对齐 | 真实 Langfuse 写入/回读、人工听感终审、其余 20 集尚未用同一声线重做 | 课程生产从“有 AAC 的卡片片”转为“原速神经 TTS + 画面内字幕”；Goal 保持 active | ffmpeg scene=0.08 对深色卡片不敏感，不能单独当切镜门 | 下一集 Trace vs 日志能否用同一 Xiaoxiao 原速流程重做？ | 用户已选定 Xiaoxiao |
 | 3 | 2026-11-22 | 生产治理能否用快切讲清“配置能力不等于已安全”？ | LF-07/LF-08/LF-09 v2、事实审计、敏感信息检查、媒体质量门 | LF-07–LF-09 快切样片；LF-09 sampling/脱敏/保留/权限/告警审计；播放器接入 LF-09；修复 LF-09 字幕乱码 | 九集快切媒体门通过；LF-09 未暴露内网地址、key、secret、Authorization 或 PII；治理结论保持 prototype/L1 | 当前部署的 redaction、retention、权限审计、告警闭环和真实运行仍未验证 | 课程线完成 Score→成本→反馈→生产治理的连续样片链；Goal 保持 active | 下一步推进 LF-10 多步骤 Agent 调用树，并核对真实调用树证据边界 | 如何展示 Agent 调用树的决策、Tool 和 Generation 而不把示意树说成当前实例 Trace？ | 待下一轮来源与样片审计 |
 
+| 5 | 2026-11-23 | 选定 Xiaoxiao 后，原速分段配音加画面内字幕能否连续做出可看的入门课？ | 失败拉伸版 Xiaoxiao、LF-01 v3 乱码第 4 镜、LF-02/03 分镜、自然旁白门 | 重渲 LF-01 第 4 镜；交付 LF-02/03/07 Xiaoxiao 原速成片；播放器改链；独立抽帧与自然旁白门 PASS | LF-01 173.033s/24 镜、LF-02 161.003s/20 镜、LF-03 170.600s/20 镜、LF-07 176.233s/20 镜；画面内字幕；未拉伸；无 U+FFFD | 真实 Langfuse 写入/回读、人工听感终审、其余集尚未用同一声线重做 | 课程生产从卡片片转为 Xiaoxiao 原速 + 烧录字幕；Goal 保持 active | 媒体门 PASS 仍不能代替 Dataset/Score/OTEL 回读 | 下一集 Prompt 版本/label 如何用同一 Xiaoxiao 流程讲清，且不把 label 说成已发布或效果更好？ | 用户已选定 Xiaoxiao |
+| 6 | 2026-11-23 | Prompt 版本和 Dataset 能否用同一 Xiaoxiao 原速流程讲清，且不把示意写成已发布或实验已跑通？ | LF-04/LF-05 分镜、独立复核、自然旁白门 | 交付 LF-04/LF-05 Xiaoxiao 原速成片；播放器改链；LF-04 独立复核 PASS；LF-05 主 agent 抽帧 PASS | LF-04 166.866s/20 镜、LF-05 173.071s/20 镜；画面内字幕；未拉伸；无 U+FFFD | 真实 Prompt/Dataset/Score 写入与回读、人工听感终审、LF-06 尚未重做 | Xiaoxiao 原速样片覆盖入门到 Dataset；Goal 保持 active | 媒体门 PASS 仍不能代替 Dataset run | 下一集 Score 与失败样本如何用同一流程讲清，且不把示意分数说成当前实例评分？ | 用户已选定 Xiaoxiao |
+
 ## 持续规则
 
 - 阶段 `done` 不等于 Goal `complete`。
