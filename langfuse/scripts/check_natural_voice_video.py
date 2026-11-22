@@ -48,6 +48,13 @@ def probe(path: Path) -> dict:
     return json.loads(p.stdout)
 
 
+def decode_check(path: Path) -> tuple[bool, str]:
+    """Decode both streams so a valid-looking header cannot hide corrupt packets."""
+    p = run([FFMPEG, "-v", "error", "-xerror", "-i", str(path), "-f", "null", "-"])
+    detail = (p.stderr or p.stdout or "").strip()
+    return p.returncode == 0, detail[-2000:]
+
+
 def parse_ts(token: str) -> float:
     m = TS_RE.fullmatch(token.strip())
     if not m:
@@ -172,6 +179,10 @@ def main() -> int:
         return 1
 
     meta = probe(args.video)
+    decoded, decode_detail = decode_check(args.video)
+    print(f"full_decode: {'PASS' if decoded else 'FAIL'}")
+    if not decoded:
+        errors.append(f"full audio/video decode failed: {decode_detail or 'unknown ffmpeg error'}")
     fmt_dur = float(meta.get("format", {}).get("duration") or 0)
     streams = meta.get("streams", [])
     video = next((s for s in streams if s.get("codec_type") == "video"), None)

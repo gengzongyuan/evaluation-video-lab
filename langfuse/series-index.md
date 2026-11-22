@@ -40,7 +40,9 @@
 | LF-03 | `videos/LF-03-span-generation-xiaoxiao-v3.mp4` | `captions/LF-03-xiaoxiao-v3.srt` / `.vtt` | prototype / L1 | Xiaoxiao 原速 20 镜；画面内字幕；170.600 秒；未拉伸 |
 | LF-04 | `videos/LF-04-prompt-version-xiaoxiao-v3.mp4` | `captions/LF-04-xiaoxiao-v3.srt` / `.vtt` | prototype / L1 | Xiaoxiao 原速 20 镜；画面内字幕；166.866 秒；未拉伸 |
 | LF-05 | `videos/LF-05-dataset-xiaoxiao-v3.mp4` | `captions/LF-05-xiaoxiao-v3.srt` / `.vtt` | prototype / L1 | Xiaoxiao 原速 20 镜；画面内字幕；173.071 秒；未拉伸 |
+| LF-06 | `videos/LF-06-score-xiaoxiao-v3.mp4` | `captions/LF-06-xiaoxiao-v3.srt` / `.vtt` | prototype / L1 | Xiaoxiao 原速 20 镜；画面内字幕；171.266 秒；未拉伸 |
 | LF-07 | `videos/LF-07-cost-latency-xiaoxiao-v3.mp4` | `captions/LF-07-xiaoxiao-v3.srt` / `.vtt` | prototype / L1 | Xiaoxiao 原速 20 镜；画面内字幕；176.233 秒；未拉伸 |
+| LF-09 | `videos/LF-09-governance-xiaoxiao-v3.mp4` | `captions/LF-09-xiaoxiao-v3.srt` / `.vtt` | prototype / L1 | Xiaoxiao 原速 20 镜；画面内字幕；182.876 秒；未拉伸 |
 
 | LF-03 | Span / Generation / Tool / Agent | 快切 v2 | `lf03-type-card.md`、`lf03-script-revision.md` | `videos/LF-03-span-generation-v2.mp4` | prototype | L1 |
 

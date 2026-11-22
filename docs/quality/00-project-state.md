@@ -112,5 +112,7 @@
 - LF-04：`langfuse/videos/LF-04-prompt-version-xiaoxiao-v3.mp4`，166.866 秒、20 镜、画面内字幕；独立抽帧、自然旁白门与独立复核 PASS。
 - LF-05：`langfuse/videos/LF-05-dataset-xiaoxiao-v3.mp4`，173.071 秒、20 镜、画面内字幕；主 agent 抽帧与自然旁白门 PASS。
 - LF-07：`langfuse/videos/LF-07-cost-latency-xiaoxiao-v3.mp4`，176.233 秒、20 镜、画面内字幕；独立抽帧与自然旁白门 PASS。
-- 播放器已优先链接 LF-01/02/03/04/05/07 的 Xiaoxiao 原速版。状态仍全部 `prototype / L1`。
+- LF-06：`langfuse/videos/LF-06-score-xiaoxiao-v3.mp4`，171.266 秒、20 镜、画面内字幕；主 agent 抽帧与自然旁白门 PASS。
+- LF-09：`langfuse/videos/LF-09-governance-xiaoxiao-v3.mp4`，182.876 秒、20 镜、画面内字幕；主 agent 抽帧与自然旁白门 PASS。时长由旁白决定，略超 180 秒。
+- 播放器已优先链接 LF-01/02/03/04/05/06/07/09 的 Xiaoxiao 原速版。状态仍全部 `prototype / L1`。
 - 未把 health 200、示意 ID、媒体门或截图写成当前实例 Trace/Dataset/Score 写入或回读已验证。

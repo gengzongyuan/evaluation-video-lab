@@ -14,8 +14,8 @@
 | 镜 | 构图 | 时长提示 | 口播 | 画面 | 烧录字幕 |
 |---:|---|---|---|---|---|
 | 01 | `hook` | 6–10s | 看到低分样本，别急着全塞进 Dataset。先问：它能不能成为一条可复跑的回归用例？ | 低分样本冲向 Dataset，中央闸门写“可复跑？” | 低分样本，先别直接入库 |
-| 02 | `filter-map` | 6–10s | 自定义 Score 可以帮你筛选候选，比如按名称、来源、数值或配置版本找样本。分数只是入口，不是根因。 | Score 字段映射到候选筛选器，根因区仍标未知 | Score 是筛选入口，不是根因 |
-| 03 | `score-anatomy` | 6–10s | 筛选前先固定 Score 定义。名称相同但评分标准变了，就不能把不同版本当成同一种失败。 | 同名 Score 的两个定义版本分叉，禁止直接合并 | 同名分数，也要核对定义版本 |
+| 02 | `filter-map` | 6–10s | 自定义 Score 可以帮你筛选候选，比如按名称、来源、数值或配置 ID 找样本。分数只是入口，不是根因。 | Score 字段映射到候选筛选器，根因区仍标未知 | Score 是筛选入口，不是根因 |
+| 03 | `score-config` | 6–10s | 筛选前先固定 Score 定义。配置不可变；同名分数若关联不同配置，就不能直接当成同一种失败。 | 同名 Score 关联不同 configId，禁止直接合并 | 同名分数，也要核对配置 ID |
 | 04 | `missing-score` | 6–10s | 没有 Score 的样本单独标成 unknown。缺失可能来自没评、评估失败或关联缺失，不能自动当零分。 | 空 Score 卡进入 unknown 分支，零分分支断开 | 缺失写 unknown，不自动当零分 |
 | 05 | `three-buckets` | 6–10s | 候选池别只收低分。保留通过样本和边界案例，才能检查修复有没有误伤原本正确的行为。 | 失败、正例、边界三个样本桶并列进入候选池 | 失败、正例、边界都要保留 |
 | 06 | `candidate-queue` | 6–10s | 把候选放进待审核队列，先记录筛选条件和抽样范围。不要从一次 run 推成整体质量结论。 | 候选队列顶部固定筛选条件与范围，整体结论留空 | 记录筛选条件，不外推整体质量 |
@@ -26,7 +26,7 @@
 | 11 | `dedupe` | 6–10s | 相似失败不等于可以无限复制。按规范化输入和失败特征去重，同时保留必要的不同上下文。 | 相似候选聚类去重，不同上下文分支被保留 | 相似失败去重，保留必要差异 |
 | 12 | `review-gate` | 6–10s | 入库前由人审核期望值、标签和适用范围。自动低分可以排队，不能自动宣布标准答案。 | 人工审核门检查期望值、标签、范围，自动低分停在门外 | 自动低分，不能自动成为标准答案 |
 | 13 | `dataset-schema` | 6–10s | 审核通过后再创建 Dataset item。字段、标签和元数据保持明确，缺失信息不要为了好看而补齐。 | Dataset item 表单含输入、期望、标签、元数据，未知字段留空 | 审核通过，再创建 Dataset item |
-| 14 | `version-pin` | 6–10s | 给 Dataset 和评测配置记录版本。后续重跑才能知道，结果变化来自模型、数据还是评估规则。 | 数据与评测配置版本锁定，模型变化单独对照 | 固定数据和评测配置版本 |
+| 14 | `version-pin` | 6–10s | 记录 Dataset 的版本时间戳和评测配置。后续重跑才能区分，结果变化来自模型、数据还是评估规则。 | Dataset 版本时间戳与评测配置锁定，模型变化单独对照 | 固定 Dataset 版本和评测配置 |
 | 15 | `baseline-rerun` | 6–10s | 用固定模型、Prompt、工具和数据版本重跑，再与基线比较。条件变了，就先分开报告。 | 基线与重跑双泳道，固定条件逐项锁定 | 固定条件重跑，再比较基线 |
 | 16 | `regression-matrix` | 6–10s | 回归结果至少看三类：原失败是否改善、原通过是否回退、边界样本是否仍稳定。别只看均分。 | 三行回归矩阵：失败改善、正例回退、边界稳定 | 看改善、回退和边界，不只看均分 |
 | 17 | `new-failure` | 6–10s | 出现新增失败或关键回退时，回到具体 item 和 Trace 排查。汇总变好，也不能掩盖这些样本。 | 上升汇总曲线旁突出新增失败，钻取到 item 与 Trace | 汇总变好，也不能放过关键回退 |
@@ -36,7 +36,7 @@
 
 ## 固定构图顺序
 
-`hook → filter-map → score-anatomy → missing-score → three-buckets → candidate-queue → trace-back → sanitize → expected-actual → lineage-links → dedupe → review-gate → dataset-schema → version-pin → baseline-rerun → regression-matrix → new-failure → scope-boundary → stamp → cta`
+`hook → filter-map → score-config → missing-score → three-buckets → candidate-queue → trace-back → sanitize → expected-actual → lineage-links → dedupe → review-gate → dataset-schema → version-pin → baseline-rerun → regression-matrix → new-failure → scope-boundary → stamp → cta`
 
 ## 字幕与旁白
 
@@ -50,11 +50,12 @@
 1. Score 只用于候选筛选；缺失分数写 `unknown`，不把缺失自动当零分或失败根因。
 2. 候选同时保留失败、正例和边界样本；入库前完成原运行核对、脱敏、权限检查、去重与人工审核。
 3. Dataset item 的输入与期望输出同本次实际输出分开；保留 Trace、run、item、Score 和筛选规则版本关联。
-4. 回归比较固定模型、Prompt、工具、数据和评测配置；新增失败与关键回退必须下钻，不用均分掩盖。
+4. 回归比较固定模型、Prompt、工具、Dataset 版本时间戳和评测配置；新增失败与关键回退必须下钻，不用均分掩盖。
 5. 当前文件只定义概念课画面，不证明已执行真实 Score 筛选、Dataset 写入、回读或 Experiment。
 
 ## 官方来源（录制当天复核）
 
 - Scores 数据模型：https://langfuse.com/docs/evaluation/scores/data-model
 - Experiments 数据模型：https://langfuse.com/docs/evaluation/experiments/data-model
-- Datasets：https://langfuse.com/docs/datasets
+- Datasets：https://langfuse.com/docs/evaluation/experiments/datasets
+- Academy｜Datasets：https://langfuse.com/academy/datasets

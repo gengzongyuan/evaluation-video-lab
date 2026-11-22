@@ -91,3 +91,13 @@ LF02-R2 的输入 `LF-02-voice-script-xiaoxiao.md` 和 `LF-02-shot-board-xiaoxia
 | SCAN-S5 | 越界话术扫描 | `langfuse/xiaoxiao-v3-claim-scan-lf05-lf21.md` | running |
 
 主 agent 独占汇合、播放器/索引/质量台账和 Git 提交。Goal 保持 active。
+
+## Xiaoxiao 连续样片批次 6（2026-11-23）
+
+| id | role | write_scope | status |
+|---|---|---|---|
+| LF06-R6 | 视频制作 | `langfuse/videos/LF-06-score-xiaoxiao-v3.mp4` 及字幕/渲染器/QA | done |
+| LF09-R9 | 视频制作 | `langfuse/videos/LF-09-governance-xiaoxiao-v3.mp4` 及字幕/渲染器/QA | done |
+| LF08-R8 | 视频制作 | `langfuse/videos/LF-08-feedback-xiaoxiao-v3.mp4` 及字幕/渲染器/QA | running |
+| LF05-V5 | 口播冻结 | `langfuse/LF-05-voice-script-xiaoxiao.md` 到 LF-10 | running |
+| LF06-A6 | 独立媒体复核 | `langfuse/lf06-xiaoxiao-v3-independent-review.md`、`langfuse/lf09-xiaoxiao-v3-independent-review.md` | running |
