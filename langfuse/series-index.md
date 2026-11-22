@@ -35,7 +35,7 @@
 
 | 集数 | 视频 | 字幕 | 状态 | 媒体门 |
 |---|---|---|---|---|
-| LF-01 | `videos/LF-01-langfuse-overview-v2.mp4` | `captions/LF-01-v2.srt` / `.vtt` | prototype / L1 | PASS：12 镜头、非静音、抽帧有变化 |
+| LF-01 | `videos/LF-01-langfuse-overview-xiaoxiao-v3.mp4` | `captions/LF-01-xiaoxiao-v3.srt` / `.vtt` | prototype / L1 | Xiaoxiao 原速 24 镜；画面内字幕；未拉伸 |
 | LF-02 | `videos/LF-02-trace-v2.mp4` | `captions/LF-02-v2.srt` / `.vtt` | prototype / L1 | PASS：12 镜头、非静音、抽帧有变化 |
 | LF-03 | 待生成 | 待生成 | scripted | 按 v2 门禁验收 |
 

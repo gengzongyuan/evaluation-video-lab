@@ -1,0 +1,5 @@
+.DS_Store
+langfuse/.venv-media/
+langfuse/build/
+*.pyc
+__pycache__/

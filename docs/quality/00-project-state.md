@@ -96,3 +96,9 @@
 - 课程索引：`langfuse/series-index.md`，LF-01–15。
 - manifest 已登记 15 集；其中 7 集有可播放原型，8 集保持脚本状态。
 - 本轮验证：manifest episode 数量为 15；所有登记视频文件存在且非空。
+## Xiaoxiao 原速重制（2026-11-22 晚）
+
+- 用户选定 `zh-CN-XiaoxiaoNeural`。旧 Xiaoxiao 180 秒成片被独立复核判定 FAIL：音频被拉伸、12 张卡片、无画面内字幕。
+- 新样片：`langfuse/videos/LF-01-langfuse-overview-xiaoxiao-v3.mp4`，168.7 秒、24 镜、原速旁白、烧录字幕。状态仍 `prototype / L1`。
+- 播放器 LF-01 已改为优先该文件。
+- 未把 health 200、示意画面或媒体门写成当前实例已验证。
