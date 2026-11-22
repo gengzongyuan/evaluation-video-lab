@@ -39,3 +39,20 @@
 A1/A2 不修改视频、字幕、manifest、播放器或项目权威状态。主 agent 负责 B1、汇合、质量台账、提交。停止条件：任一发现不合格须明确标为 FAIL，不得只凭媒体流存在通过。
 
 后续独立内容任务 LF14-S1：为 LF-14 SDK 与服务端版本锁定做官方来源与事实边界审计，独占写入 `langfuse/lf14-version-pinning-fact-audit.md`。不修改 manifest、播放器、视频或权威质量状态。以官方文档为准，记录可证明和不可证明的范围。
+
+## Xiaoxiao 连续样片批次 2（2026-11-22）
+
+| 任务 | 角色 | 独占输出 | 状态 |
+|---|---|---|---|
+| LF02-R2 | LF-02 原速 Xiaoxiao 成片 | `langfuse/scripts/render_lf02_xiaoxiao_v3.py`、`langfuse/videos/LF-02-trace-xiaoxiao-v3.mp4`、`langfuse/captions/LF-02-xiaoxiao-v3.srt/.vtt`、`langfuse/lf02-xiaoxiao-v3-qa.md` | running |
+| LF16-S1 | v4 OTEL 迁移事实边界 | `langfuse/lf16-v4-otel-migration-fact-audit.md` | running |
+| GATE-S2 | 原速与字幕一致性门禁 | `langfuse/scripts/check_natural_voice_video.py`、`langfuse/natural-voice-quality-gate.md` | running |
+
+后续批次（在前置独立任务完成并汇合后开始）：
+
+| 任务 | 角色 | 独占输出 | 状态 |
+|---|---|---|---|
+| LF17-S1 | health/readiness 事实审计 | `langfuse/lf17-health-readiness-fact-audit.md` | queued |
+| LF18-S1 | gateway readiness 事实审计 | `langfuse/lf18-gateway-readiness-fact-audit.md` | queued |
+
+LF02-R2 的输入 `LF-02-voice-script-xiaoxiao.md` 和 `LF-02-shot-board-xiaoxiao.md` 已冻结。使用原速分段 Xiaoxiao，不拉伸补到 180 秒。只写上述独占文件，不改播放器、manifest、质量状态。主 agent 在汇合后抽帧、核对尾部静音和字幕时间轴，再决定是否登记。
