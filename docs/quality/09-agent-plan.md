@@ -98,6 +98,18 @@ LF02-R2 的输入 `LF-02-voice-script-xiaoxiao.md` 和 `LF-02-shot-board-xiaoxia
 |---|---|---|---|
 | LF06-R6 | 视频制作 | `langfuse/videos/LF-06-score-xiaoxiao-v3.mp4` 及字幕/渲染器/QA | done |
 | LF09-R9 | 视频制作 | `langfuse/videos/LF-09-governance-xiaoxiao-v3.mp4` 及字幕/渲染器/QA | done |
-| LF08-R8 | 视频制作 | `langfuse/videos/LF-08-feedback-xiaoxiao-v3.mp4` 及字幕/渲染器/QA | running |
-| LF05-V5 | 口播冻结 | `langfuse/LF-05-voice-script-xiaoxiao.md` 到 LF-10 | running |
-| LF06-A6 | 独立媒体复核 | `langfuse/lf06-xiaoxiao-v3-independent-review.md`、`langfuse/lf09-xiaoxiao-v3-independent-review.md` | running |
+| LF08-R8 | 视频制作 | `langfuse/videos/LF-08-feedback-xiaoxiao-v3.mp4` 及字幕/渲染器/QA | done |
+| LF10-R10 | 视频制作 | `langfuse/videos/LF-10-agent-tree-xiaoxiao-v3.mp4` 及字幕/渲染器/QA | done |
+| LF11-R11 | 视频制作 | `langfuse/videos/LF-11-experiment-compare-xiaoxiao-v3.mp4` 及字幕/渲染器/QA | running |
+| LF05-V5 | 口播冻结 | `langfuse/LF-11-voice-script-xiaoxiao.md` 到 LF-13 | running |
+| LF08-A8 | 独立媒体复核 | `langfuse/lf08-xiaoxiao-v3-independent-review.md`、`langfuse/lf10-xiaoxiao-v3-independent-review.md` | running |
+
+## Xiaoxiao 连续样片批次 7（2026-11-23）
+
+冻结契约不变：`zh-CN-XiaoxiaoNeural`、`rate=-5%`；原速分段；画面内字幕；`prototype / L1`。
+
+| id | role | write_scope | status |
+|---|---|---|---|
+| LF11-R11 | 视频制作 | `langfuse/videos/LF-11-experiment-compare-xiaoxiao-v3.mp4` 及字幕/渲染器/QA | running |
+| LF11-V11 | 口播冻结 | `langfuse/LF-11-voice-script-xiaoxiao.md`、`langfuse/LF-12-voice-script-xiaoxiao.md`、`langfuse/LF-13-voice-script-xiaoxiao.md` | running |
+| LF08-A8 | 独立媒体复核 | `langfuse/lf08-xiaoxiao-v3-independent-review.md`、`langfuse/lf10-xiaoxiao-v3-independent-review.md` | running |
