@@ -92,6 +92,7 @@ def node(draw, xy, text, accent, fg, width=260, height=140):
     base.node(draw, xy, text, accent, fg, width, height)
 
 
+
 def draw_shot(shot, idx):
     bg, accent, fg = PALETTES[(idx - 1) % len(PALETTES)]
     im = Image.new("RGB", (W, H), bg)
@@ -99,142 +100,177 @@ def draw_shot(shot, idx):
     header(d, shot, idx, accent, fg)
     y = 380
     layout = shot["layout"]
+    danger = (255, 140, 150)
+    muted = (180, 190, 210)
     if layout == "hook":
-        u.panel(d, (90, y + 20, 990, y + 280))
-        label(d, "平均分 ↑", (150, y + 100), 64, accent)
-        u.panel(d, (90, y + 360, 990, y + 680), (65, 18, 28))
-        label(d, "关键样本", (150, y + 430), 44, fg)
-        label(d, "通过 → 失败", (150, y + 540), 40, (255, 140, 150))
-    elif layout == "shared-dataset":
-        node(d, (240, y), "同一 Dataset", accent, fg, 600, 160)
-        node(d, (90, y + 320), "候选 A", accent, fg, 400, 180)
-        node(d, (590, y + 320), "候选 B", accent, fg, 400, 180)
-        d.line((540, y + 160, 290, y + 320), fill=accent, width=4)
-        d.line((540, y + 160, 790, y + 320), fill=accent, width=4)
-        label(d, "输入固定，分流比较", (260, y + 560), 36, fg)
-    elif layout == "item-ids":
-        for i, side in enumerate(["A", "B"]):
-            xx = 90 + i * 480
-            u.panel(d, (xx, y + 40, xx + 430, y + 620))
-            label(d, f"run {side}", (xx + 40, y + 80), 36, accent)
+        u.panel(d, (80, y + 30, 1000, y + 390))
+        d.line((140, y + 320, 930, y + 320), fill=(75, 86, 108), width=3)
+        points = [(150, y + 285), (280, y + 265), (410, y + 280), (540, y + 245), (660, y + 250), (790, y + 80), (920, y + 65)]
+        d.line(points, fill=danger, width=8, joint="curve")
+        for px, py in points:
+            d.ellipse((px-10, py-10, px+10, py+10), fill=danger)
+        label(d, "异常信号 ↑", (140, y + 80), 40, fg)
+        node(d, (250, y + 470), "模型根因？", accent, fg, 580, 180)
+        label(d, "先调查，不先下结论", (300, y + 700), 34, muted)
+    elif layout == "signal-card":
+        for i, (name, value) in enumerate([("时间窗口", "待记录"), ("运行版本", "待锁定"), ("指标口径", "先写定义")]):
+            yy = y + 30 + i * 215
+            u.panel(d, (90, yy, 990, yy + 180))
+            label(d, name, (140, yy + 35), 38, fg)
+            label(d, value, (650, yy + 45), 32, accent)
+        label(d, "三个条件缺一项，就先别比较", (180, y + 700), 34, muted)
+    elif layout == "trace-pick":
+        u.panel(d, (70, y + 70, 470, y + 440))
+        label(d, "Dashboard", (120, y + 110), 36, accent)
+        for i in range(3):
+            u.rounded(d, (120, y + 200 + i*60, 410, y + 225 + i*60), 8, (60, 70, 90))
+        d.ellipse((350, y + 300, 390, y + 340), fill=danger)
+        d.line((440, y + 320, 610, y + 320), fill=accent, width=5)
+        d.polygon([(610, y+320), (575, y+300), (575, y+340)], fill=accent)
+        node(d, (610, y + 220), "原始 Trace", accent, fg, 380, 200)
+        u.panel(d, (180, y + 520, 900, y + 700))
+        label(d, "截图只作辅助证据", (260, y + 585), 36, fg)
+    elif layout == "waterfall":
+        u.panel(d, (60, y + 20, 440, y + 680))
+        label(d, "调用树", (110, y + 60), 34, accent)
+        for i, name in enumerate(["Trace", "Span", "Tool", "Generation"]):
+            yy = y + 150 + i * 120
+            node(d, (100 + i*25, yy), name, danger if i == 2 else accent, fg, 260, 90)
+        u.panel(d, (480, y + 20, 1020, y + 680))
+        label(d, "时间瀑布", (530, y + 60), 34, accent)
+        for i, (name, width) in enumerate([("retrieve", 270), ("parse", 210), ("tool", 390), ("generate", 250)]):
+            yy = y + 170 + i * 120
+            label(d, name, (520, yy), 26, fg)
+            u.rounded(d, (520, yy + 48, 520 + width, yy + 82), 8, danger if name == "tool" else accent)
+        label(d, "失败节点高亮", (610, y + 640), 30, danger)
+    elif layout == "inspect":
+        fields = [("input", "已脱敏"), ("output", "待核对"), ("error", "分开记录"), ("status", "待核对"), ("latency", "不填虚构值")]
+        for i, (name, state) in enumerate(fields):
+            yy = y + 20 + i * 130
+            u.panel(d, (90, yy, 990, yy + 105))
+            label(d, name, (135, yy + 28), 32, accent)
+            label(d, state, (630, yy + 32), 30, fg)
+        label(d, "报错 ≠ 低质量，分开判断", (220, y + 710), 34, muted)
+    elif layout == "root-cause-grid":
+        causes = ["模型", "工具", "数据", "权限", "配置", "环境"]
+        for i, name in enumerate(causes):
+            xx = 80 + (i % 3) * 320
+            yy = y + 50 + (i // 3) * 300
+            node(d, (xx, yy), name, accent, fg, 280, 220)
+            label(d, "待排查", (xx + 75, yy + 145), 28, muted)
+        label(d, "分类不是自动诊断", (330, y + 690), 36, accent)
+    elif layout == "hypothesis-evidence":
+        u.panel(d, (70, y + 30, 520, y + 540))
+        u.panel(d, (560, y + 30, 1010, y + 540))
+        label(d, "根因假设", (130, y + 80), 40, accent)
+        label(d, "支持证据", (620, y + 80), 40, accent)
+        label(d, "最慢节点？", (130, y + 220), 36, fg)
+        label(d, "日志 / 输入 / 输出", (620, y + 220), 30, fg)
+        label(d, "还要找反例", (130, y + 390), 34, danger)
+        label(d, "能反驳才可信", (620, y + 390), 34, fg)
+        label(d, "慢，不一定就是根因", (290, y + 630), 38, muted)
+    elif layout == "commit-card":
+        u.panel(d, (90, y + 40, 990, y + 300))
+        label(d, "commit", (140, y + 80), 34, accent)
+        label(d, "脱敏占位 / 待填写", (140, y + 180), 42, fg)
+        node(d, (90, y + 400), "变更摘要", accent, fg, 400, 180)
+        node(d, (590, y + 400), "运行版本", accent, fg, 400, 180)
+        d.line((540, y + 300, 290, y + 400), fill=accent, width=4)
+        d.line((540, y + 300, 790, y + 400), fill=accent, width=4)
+        label(d, "修复点必须能回指", (320, y + 660), 36, fg)
+    elif layout == "isolation-gate":
+        for i, (name, allowed) in enumerate([("Prompt", True), ("模型", False), ("数据", False), ("参数", False)]):
+            yy = y + 30 + i * 155
+            u.panel(d, (90, yy, 990, yy + 125))
+            label(d, name, (140, yy + 35), 38, fg)
+            label(d, "本次只改这一项" if allowed else "锁定", (570, yy + 42), 30, accent if allowed else muted)
+        label(d, "变量混在一起，就无法归因", (210, y + 690), 34, danger)
+    elif layout == "dataset-return":
+        node(d, (250, y + 20), "原始失败样本", danger, fg, 580, 150)
+        node(d, (90, y + 290), "脱敏", accent, fg, 400, 150)
+        node(d, (590, y + 290), "审核", accent, fg, 400, 150)
+        node(d, (250, y + 550), "固定回归 Dataset", accent, fg, 580, 150)
+        d.line((540, y + 170, 290, y + 290), fill=accent, width=4)
+        d.line((540, y + 170, 790, y + 290), fill=accent, width=4)
+        d.line((290, y + 440, 450, y + 550), fill=accent, width=4)
+        d.line((790, y + 440, 630, y + 550), fill=accent, width=4)
+        label(d, "来源 + 稳定 item ID", (350, y + 740), 30, fg)
+    elif layout == "freeze-regression":
+        for i, name in enumerate(["Dataset", "模型", "Prompt", "参数", "评分规则"]):
+            yy = y + 20 + i * 130
+            u.panel(d, (90, yy, 990, yy + 105))
+            label(d, name, (140, yy + 28), 34, fg)
+            label(d, "LOCKED", (740, yy + 32), 28, accent, True)
+        label(d, "同一组题，同一把尺", (320, y + 710), 36, fg)
+    elif layout == "rerun-candidate":
+        node(d, (90, y + 50), "固定回归集", accent, fg, 400, 170)
+        node(d, (590, y + 50), "修复版本", accent, fg, 400, 170)
+        d.line((290, y + 220, 460, y + 340), fill=accent, width=4)
+        d.line((790, y + 220, 620, y + 340), fill=accent, width=4)
+        node(d, (250, y + 340), "新 run / 待执行", accent, fg, 580, 170)
+        for i, item in enumerate(["逐 item 输出", "运行时间", "run 标识"]):
+            label(d, item, (150 + i*290, y + 610), 28, fg, max_w=250)
+    elif layout == "before-after":
+        for i, name in enumerate(["BEFORE / 修复前", "AFTER / 修复后"]):
+            xx = 70 + i * 510
+            u.panel(d, (xx, y + 30, xx + 430, y + 650))
+            label(d, name, (xx + 35, y + 80), 30, accent, True, 360)
             for j in range(3):
-                label(d, f"item_0{j+1}", (xx + 50, y + 200 + j * 110), 34, fg)
-        d.line((520, y + 230, 560, y + 230), fill=accent, width=4)
-        d.line((520, y + 340, 560, y + 340), fill=accent, width=4)
-        d.line((500, y + 470, 580, y + 540), fill=(255, 140, 150), width=6)
-        label(d, "错位连接打叉", (360, y + 680), 32, (255, 140, 150))
-    elif layout == "rule-lock":
-        u.panel(d, (90, y + 40, 990, y + 280))
-        label(d, "评分规则 已上锁", (150, y + 120), 48, fg)
-        node(d, (90, y + 360), "空值规则", accent, fg, 420, 220)
-        node(d, (570, y + 360), "失败判定", accent, fg, 420, 220)
-    elif layout == "baseline-candidate":
-        u.panel(d, (70, y + 40, 500, y + 680))
-        label(d, "baseline", (140, y + 140), 44, fg)
-        label(d, "已审查，不可事后替换", (110, y + 360), 32, accent, max_w=350)
-        u.panel(d, (580, y + 40, 1010, y + 680))
-        label(d, "candidate", (640, y + 140), 44, fg)
-        label(d, "待比较", (680, y + 360), 36, accent)
-    elif layout == "run-a":
-        u.panel(d, (90, y + 40, 990, y + 680))
-        label(d, "基线 run 抽屉", (150, y + 80), 40, accent)
-        for i, item in enumerate(["item 原始输出", "metadata", "运行时间"]):
-            yy = y + 200 + i * 140
-            label(d, item, (180, yy), 40, fg)
-            label(d, "已保存", (720, yy + 8), 28, accent)
-    elif layout == "run-b":
-        for i, (name, state) in enumerate([("Prompt", "可改"), ("模型", "锁定"), ("参数", "锁定"), ("数据", "锁定")]):
-            yy = y + i * 165
-            u.panel(d, (90, yy, 990, yy + 140))
-            label(d, name, (150, yy + 40), 40, fg)
-            label(d, state, (700, yy + 48), 32, accent if state == "可改" else (180, 190, 210))
-    elif layout == "pair-table":
-        heads = ["item", "A", "B", "变化"]
-        for c, h in enumerate(heads):
-            label(d, h, (100 + c * 230, y + 20), 30, accent, True, 200)
-        for r in range(4):
-            for c in range(4):
-                x, yy = 80 + c * 235, y + 100 + r * 140
-                u.panel(d, (x, yy, x + 215, yy + 120))
-                text = f"0{r+1}" if c == 0 else "示意"
-                label(d, text, (x + 50, yy + 35), 30, fg)
-    elif layout == "regression-spotlight":
-        u.panel(d, (90, y + 20, 990, y + 220), (24, 30, 44))
-        label(d, "平均分（背景）", (150, y + 90), 36, (160, 170, 190))
-        u.panel(d, (90, y + 280, 990, y + 680), (65, 18, 28))
-        label(d, "回归样本", (150, y + 360), 48, fg)
-        label(d, "通过 → 失败", (150, y + 500), 40, (255, 140, 150))
-    elif layout == "missing-gate":
-        u.panel(d, (90, y + 40, 990, y + 220))
-        label(d, "发布门前", (150, y + 100), 48, fg)
-        for i, text in enumerate(["missing", "failed", "no score"]):
-            node(d, (70 + i * 330, y + 320), text, (255, 140, 150), fg, 290, 220)
-    elif layout == "null-handling":
-        node(d, (240, y), "空值", accent, fg, 600, 150)
-        node(d, (90, y + 280), "按规则处理", accent, fg, 900, 140)
-        node(d, (90, y + 480), "算成零分 ×", (255, 140, 150), fg, 420, 150)
-        node(d, (570, y + 480), "偷偷删分母 ×", (255, 140, 150), fg, 420, 150)
-    elif layout == "cohort-bars":
-        for i, name in enumerate(["场景 A", "场景 B", "场景 C"]):
-            yy = y + 20 + i * 210
-            label(d, name, (90, yy), 32, fg)
-            u.rounded(d, (90, yy + 60, 720, yy + 120), 16, (25, 32, 48))
-            u.rounded(d, (90, yy + 60, 90 + (220 + i * 90), yy + 120), 16, accent)
-            label(d, "n 留空", (780, yy + 60), 28, accent)
-    elif layout == "repeat-runs":
-        d.line((120, y + 520, 960, y + 520), fill=(80, 90, 110), width=4)
-        for i in range(8):
-            x = 160 + i * 100
-            yy = y + 280 + ((-1) ** i) * (40 + i * 8)
-            d.ellipse((x - 16, yy - 16, x + 16, yy + 16), fill=accent if i % 2 else (255, 141, 164))
-        label(d, "单次差异", (150, y + 80), 40, fg)
-        label(d, "稳定区间未计算前留空", (150, y + 600), 36, accent)
-    elif layout == "cost-latency":
-        node(d, (90, y + 40), "cost", accent, fg, 420, 220)
-        node(d, (570, y + 40), "latency", accent, fg, 420, 220)
-        node(d, (90, y + 340), "unknown 保留", (255, 180, 120), fg, 420, 200)
-        node(d, (570, y + 340), "P95 未证明", (255, 140, 150), fg, 420, 200)
-        label(d, "同条件比较，不外推长期", (180, y + 600), 36, fg)
-    elif layout == "metadata":
-        items = ["Dataset 版本", "Prompt", "模型 / 参数", "SDK / 代码", "运行时间"]
-        for i, item in enumerate(items):
-            yy = y + i * 130
-            u.panel(d, (90, yy, 990, yy + 110))
-            label(d, item, (140, yy + 30), 34, fg)
-            label(d, "A/B 对应", (720, yy + 34), 26, accent, True)
+                u.panel(d, (xx + 40, y + 190 + j*130, xx + 390, y + 290 + j*130))
+                label(d, f"item_0{j+1}", (xx + 65, y + 215 + j*130), 28, fg)
+                label(d, "待回读", (xx + 230, y + 220 + j*130), 26, muted)
+        label(d, "逐条对照，不只看平均分", (260, y + 710), 34, fg)
+    elif layout == "new-failure":
+        node(d, (90, y + 70), "原失败样本", accent, fg, 400, 180)
+        node(d, (590, y + 70), "结果待回读", accent, fg, 400, 180)
+        u.panel(d, (90, y + 350, 990, y + 650), (65, 18, 28))
+        label(d, "新增失败检查区", (150, y + 400), 42, danger)
+        label(d, "关键场景回退？", (150, y + 530), 36, fg)
+        label(d, "修好一条 ≠ 没碰坏别处", (250, y + 710), 34, muted)
     elif layout == "readback-loop":
-        for i, item in enumerate(["run A 回读", "run B 回读", "同一 item", "失败类型"]):
+        for i, item in enumerate(["修复 run", "同一 item", "Score / 输出 / 错误", "同轴回读"]):
             yy = y + i * 175
             node(d, (140, yy), item, accent, fg, 800, 140)
             if i < 3:
                 d.polygon([(520, yy + 148), (560, yy + 148), (540, yy + 175)], fill=accent)
-    elif layout == "bounded-claim":
-        u.panel(d, (80, y + 20, 1000, y + 700))
-        u.panel(d, (130, y + 90, 950, y + 620))
-        u.panel(d, (190, y + 180, 890, y + 520))
-        label(d, "数据", (230, y + 50), 28, accent)
-        label(d, "版本", (230, y + 120), 28, accent)
-        label(d, "条件", (230, y + 210), 28, accent)
-        label(d, "本次观察到…", (260, y + 320), 40, fg)
-        label(d, "不是全面领先", (260, y + 410), 32, (255, 160, 170))
-    elif layout == "stats-gate":
-        u.panel(d, (90, y + 40, 990, y + 300))
-        label(d, "观察到差异", (150, y + 130), 48, fg)
-        u.panel(d, (90, y + 380, 990, y + 680), (50, 28, 18))
-        label(d, "统计显著", (150, y + 460), 48, (255, 180, 120))
-        label(d, "缺样本量 / 波动 / 区间就不说", (150, y + 560), 32, fg)
+    elif layout == "rollback-threshold":
+        u.panel(d, (90, y + 30, 990, y + 250))
+        label(d, "告警 / 回滚门槛", (140, y + 80), 42, accent)
+        label(d, "发布前定义，数值留空", (140, y + 165), 32, fg)
+        node(d, (90, y + 350), "决策责任人", accent, fg, 400, 180)
+        node(d, (590, y + 350), "退回上一版本", accent, fg, 400, 180)
+        label(d, "关键回退时，知道谁来退、退到哪", (150, y + 640), 32, fg)
+    elif layout == "trend-boundary":
+        u.panel(d, (90, y + 40, 990, y + 650))
+        d.line((160, y + 520, 900, y + 520), fill=(75, 86, 108), width=3)
+        d.line((160, y + 150, 160, y + 520), fill=(75, 86, 108), width=3)
+        d.ellipse((270, y + 330, 310, y + 370), fill=accent)
+        label(d, "这一次成功", (330, y + 320), 36, accent)
+        for i in range(4):
+            d.ellipse((500+i*90, y + 265, 520+i*90, y + 285), outline=muted, width=3)
+        label(d, "长期趋势仍需观察", (260, y + 590), 38, fg)
+    elif layout == "release-gate":
+        for i, item in enumerate(["异常 Trace", "修复 commit", "回归回读"]):
+            node(d, (70 + i*330, y + 40), item, accent, fg, 290, 160)
+            d.line((215 + i*330, y + 200, 540, y + 360), fill=accent, width=3)
+        u.panel(d, (180, y + 360, 900, y + 630), (65, 18, 28))
+        label(d, "发布复核门", (300, y + 420), 48, danger)
+        label(d, "缺一项就保持关闭", (300, y + 540), 36, fg)
     elif layout == "stamp":
         u.panel(d, (72, y + 45, 1008, y + 710), (40, 17, 24))
-        label(d, "PROTOTYPE", (135, y + 115), 68, (255, 140, 150))
+        label(d, "PROTOTYPE", (135, y + 115), 68, danger)
         label(d, "L1 / 课程示意", (135, y + 250), 54, fg)
-        for i, item in enumerate(["run A：未证明", "run B：未证明", "Score 回读：未证明"]):
-            label(d, item, (135, y + 390 + i * 80), 34, (255, 170, 180))
+        for i, item in enumerate(["异常定位：未证明", "代码修复：未证明", "回归验证：未证明"]):
+            label(d, item, (135, y + 390 + i*80), 34, (255, 170, 180))
     elif layout == "cta":
-        u.panel(d, (72, y + 55, 1008, y + 720), tuple(int(c * .35) for c in accent))
-        label(d, "下一集 / LF-12", (130, y + 115), 38, fg)
-        label(d, "异常 Trace → 修复 → 回归", (130, y + 270), 44, accent)
-        for i, text in enumerate(["定位", "修复", "回归"]):
-            node(d, (120 + i * 300, y + 480), text, accent, fg, 260, 140)
+        u.panel(d, (72, y + 45, 1008, y + 720), tuple(int(c * .35) for c in accent))
+        label(d, "下一集 / LF-13", (130, y + 95), 38, fg)
+        label(d, "自托管架构与健康检查", (130, y + 210), 44, accent)
+        for i, item in enumerate(["Web", "Worker", "DB", "Redis", "对象存储"]):
+            xx = 105 + (i % 3)*300
+            yy = y + 380 + (i//3)*170
+            node(d, (xx, yy), item, accent, fg, 260, 120)
+        label(d, "health / readiness 各能证明什么？", (160, y + 700), 30, fg)
     else:
         raise ValueError(f"unknown layout: {layout}")
     u.chips(d, shot["chips"], H - 360, accent, fg)
@@ -262,7 +298,7 @@ def main() -> int:
         print(f"shot {shot['id']}: {seconds:.3f}s / {shot['layout']}", flush=True)
     concat = BUILD / "concat.txt"
     concat.write_text("".join(f"file '{p}'\n" for p in clips), encoding="utf-8")
-    video = ROOT / "langfuse/videos/LF-12-incident-xiaoxiao-v3.mp4"
+    video = ROOT / "langfuse/videos/LF-12-debug-regression-xiaoxiao-v3.mp4"
     base.run([FFMPEG, "-y", "-hide_banner", "-loglevel", "error", "-f", "concat", "-safe", "0",
               "-i", str(concat), "-c:v", "libx264", "-pix_fmt", "yuv420p", "-c:a", "aac",
               "-b:a", "128k", "-movflags", "+faststart", str(video)])

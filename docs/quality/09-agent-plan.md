@@ -120,6 +120,16 @@ LF02-R2 的输入 `LF-02-voice-script-xiaoxiao.md` 和 `LF-02-shot-board-xiaoxia
 
 | id | role | write_scope | status |
 |---|---|---|---|
-| LF12-R12 | 视频制作 | `langfuse/videos/LF-12-debug-regression-xiaoxiao-v3.mp4` 及字幕/渲染器/QA | running |
+| LF12-R12 | 视频制作 | `langfuse/videos/LF-12-debug-regression-xiaoxiao-v3.mp4` 及字幕/渲染器/QA | done |
 | LF11-V11 | 口播冻结 | `langfuse/LF-11-voice-script-xiaoxiao.md` 到 LF-15 | running |
 | LF11-A11 | 独立媒体复核 | `langfuse/lf11-xiaoxiao-v3-independent-review.md` | running |
+
+## Xiaoxiao 连续样片批次 9（2026-11-23）
+
+冻结契约不变：`zh-CN-XiaoxiaoNeural`、`rate=-5%`；原速分段；画面内字幕；`prototype / L1`。
+
+| id | role | write_scope | status |
+|---|---|---|---|
+| LF13-R13 | 视频制作 | `langfuse/videos/LF-13-self-hosting-xiaoxiao-v3.mp4` 及字幕/渲染器/QA | running |
+| LF12-A12 | 独立媒体复核 | `langfuse/lf12-xiaoxiao-v3-independent-review.md` | running |
+| LF11-V11 | 口播冻结 | `langfuse/LF-11-voice-script-xiaoxiao.md` 到 LF-15 | running |
