@@ -45,6 +45,7 @@
 | LF-08 | `videos/LF-08-feedback-xiaoxiao-v3.mp4` | `captions/LF-08-xiaoxiao-v3.srt` / `.vtt` | prototype / L1 | Xiaoxiao 原速 20 镜；画面内字幕；173.166 秒；未拉伸 |
 | LF-09 | `videos/LF-09-governance-xiaoxiao-v3.mp4` | `captions/LF-09-xiaoxiao-v3.srt` / `.vtt` | prototype / L1 | Xiaoxiao 原速 20 镜；画面内字幕；182.876 秒；未拉伸 |
 | LF-10 | `videos/LF-10-agent-tree-xiaoxiao-v3.mp4` | `captions/LF-10-xiaoxiao-v3.srt` / `.vtt` | prototype / L1 | Xiaoxiao 原速 20 镜；画面内字幕；181.760 秒；未拉伸 |
+| LF-11 | `videos/LF-11-compare-xiaoxiao-v3.mp4` | `captions/LF-11-xiaoxiao-v3.srt` / `.vtt` | prototype / L1 | Xiaoxiao 原速 20 镜；画面内字幕；170.900 秒；未拉伸 |
 
 | LF-03 | Span / Generation / Tool / Agent | 快切 v2 | `lf03-type-card.md`、`lf03-script-revision.md` | `videos/LF-03-span-generation-v2.mp4` | prototype | L1 |
 

@@ -116,5 +116,6 @@
 - LF-09：`langfuse/videos/LF-09-governance-xiaoxiao-v3.mp4`，182.876 秒、20 镜、画面内字幕；主 agent 抽帧与自然旁白门 PASS。时长由旁白决定，略超 180 秒。
 - LF-08：`langfuse/videos/LF-08-feedback-xiaoxiao-v3.mp4`，173.166 秒、20 镜、画面内字幕；主 agent 抽帧与自然旁白门 PASS。
 - LF-10：`langfuse/videos/LF-10-agent-tree-xiaoxiao-v3.mp4`，181.760 秒、20 镜、画面内字幕；主 agent 抽帧与自然旁白门 PASS。第 1 镜 11.376 秒略超 10 秒，保持原速。
-- 播放器已优先链接 LF-01/02/03/04/05/06/07/08/09/10 的 Xiaoxiao 原速版。状态仍全部 `prototype / L1`。
+- LF-11：`langfuse/videos/LF-11-compare-xiaoxiao-v3.mp4`，170.900 秒、20 镜、画面内字幕；主 agent 抽帧与自然旁白门 PASS。第 14 镜 10.032 秒略超 10 秒，保持原速。
+- 播放器已优先链接 LF-01/02/03/04/05/06/07/08/09/10/11 的 Xiaoxiao 原速版。状态仍全部 `prototype / L1`。
 - 未把 health 200、示意 ID、媒体门或截图写成当前实例 Trace/Dataset/Score 写入或回读已验证。
