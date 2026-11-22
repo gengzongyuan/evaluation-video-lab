@@ -1,22 +1,21 @@
-# 字幕烧录方案（LF-01）
+# 字幕方案
 
-## 结论
-当前系统 ffmpeg 8.1.2 不包含 `subtitles`/`ass`/`drawtext` 视频滤镜，无法在本机直接把 SRT 烧录进 MP4；不能把“外挂 SRT”冒充“视频内字幕”。
+核对日期：2026-11-23（Asia/Shanghai）
 
-## 已确认资产
-- 原视频：`videos/LF-01-langfuse-overview-v2.mp4`
-- 字幕：`captions/LF-01-v2.srt`、`captions/LF-01-v2.vtt`
-- 中文字体可用：`STSong`、`Kaiti SC`
+## 当前正确做法
 
-## 推荐命令（在带 libass 的 ffmpeg 环境执行）
+Xiaoxiao v3 渲染脚本在画帧时写入底部字幕条（caption_box）。用户打开 MP4 就能看见字幕，同时保留独立 SRT/VTT。
+
+不要对 Xiaoxiao v3 再跑 ffmpeg subtitles 滤镜，会叠两层字。
+
+## 仅适用于旧 v2（画面里没有字幕条）
+
+系统 PATH 里的 ffmpeg 8.1.2 没有 subtitles/ass/drawtext。需要烧录时用：
+
 ```bash
-ffmpeg -i LF-01-langfuse-overview-v2.mp4 \
-  -vf "subtitles=LF-01-v2.srt:force_style='FontName=STSong,FontSize=18,PrimaryColour=&H00FFFFFF,OutlineColour=&H80000000,BorderStyle=1,Outline=2,Shadow=1,Alignment=2,MarginV=90'" \
-  -c:v libx264 -crf 20 -c:a copy LF-01-langfuse-overview-v2-burnin.mp4
+/opt/homebrew/opt/ffmpeg@7/bin/ffmpeg -i <old-v2.mp4> \
+  -vf "subtitles=filename=<file.srt>:force_style='FontName=STSong,FontSize=16,PrimaryColour=&H00FFFFFF,OutlineColour=&H80000000,BorderStyle=1,Outline=2,Shadow=1,Alignment=2,MarginV=90'" \
+  -c:v libx264 -crf 20 -c:a copy <out-burnin.mp4>
 ```
 
-## 字幕样式
-白字、黑色描边、底部居中、90px 下边距；每段字幕控制在两行以内。独立 SRT/VTT 仍需保留，便于播放器关闭/切换字幕。
-
-## 验收
-烧录后必须抽帧确认字幕可见，并用 `ffprobe` 确认 H.264/AAC、竖屏尺寸和时长；烧录文件另存为 `videos/burnin/`，不覆盖原视频。
+烧录后必须抽帧确认只有一层字幕，并且不覆盖源文件。
